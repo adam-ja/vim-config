@@ -42,3 +42,8 @@ In addition to being git submodules, all plugins are installed as bundles and ma
 [file-line](https://github.com/bogado/file-line) allows you to open files in vim on a specific line with
 
     vim path/to/file:lineNo
+
+
+### SearchComplete
+
+[SearchComplete](https://github.com/vim-scripts/SearchComplete.git) lets you tab-complete words in a search ( / ).
