@@ -36,3 +36,9 @@ In addition to being git submodules, all plugins are installed as bundles and ma
 ### BufExplorer
 
 [BufExplorer](https://github.com/vim-scripts/bufexplorer.zip) provides quick and easy switching between open buffers.
+
+### file-line
+
+[file-line](https://github.com/bogado/file-line) allows you to open files in vim on a specific line with
+
+    vim path/to/file:lineNo
