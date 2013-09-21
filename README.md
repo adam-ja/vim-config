@@ -23,6 +23,10 @@ Thanks to Drew Neil for getting me started with [this vimcast](http://vimcasts.o
         cd ~/.vim
         git submodule update --init
 
+## vimrc
+
+For the persistant undo to work, the ~/.vim-undo directory must be created
+
 ## Plugins
 
 Where possible, plugins are managed as git submodules, so they can be easily updated using
