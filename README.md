@@ -54,3 +54,15 @@ In addition to being git submodules, all plugins are installed as bundles and ma
 ### snipmate
 
 [snipmate](https://github.com/msanders/snipmate.vim) allows you to insert snippets of text by typing some trigger word followed by tab.
+
+### Command-T
+
+[Command-T](https://github.com/wincent/Command-T) provides an extremely fast way to open files simply by typing characters that appear in their paths.
+
+It requires ruby and vim with ruby support to be installed.
+
+Whenever this plugin is installed or updated, it must be built using
+
+    cd ~/.vim/bundle/command-t/ruby/command-t
+    ruby extconf.rb
+    make
