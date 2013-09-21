@@ -29,6 +29,10 @@ Where possible, plugins are managed as git submodules, so they can be easily upd
 
     git submodule foreach git pull origin master
 
-## Pathogen
+### Pathogen
 
 In addition to being git submodules, all plugins are installed as bundles and managed using [Pathogen](https://github.com/tpope/vim-pathogen), including Pathogen itself. A symlink is used in the autoload directory to ensure Pathogen loads with vim and brings in all the other plugins it manages.
+
+### BufExplorer
+
+[BufExplorer](https://github.com/vim-scripts/bufexplorer.zip) provides quick and easy switching between open buffers.
