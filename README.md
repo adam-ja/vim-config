@@ -50,3 +50,7 @@ In addition to being git submodules, all plugins are installed as bundles and ma
 ### emmet
 
 [emmet](https://github.com/mattn/emmet-vim) expands abbreviations to make writing HTML faster.
+
+### snipmate
+
+[snipmate](https://github.com/msanders/snipmate.vim) allows you to insert snippets of text by typing some trigger word followed by tab.
