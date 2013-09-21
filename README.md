@@ -43,7 +43,10 @@ In addition to being git submodules, all plugins are installed as bundles and ma
 
     vim path/to/file:lineNo
 
-
 ### SearchComplete
 
-[SearchComplete](https://github.com/vim-scripts/SearchComplete.git) lets you tab-complete words in a search ( / ).
+[SearchComplete](https://github.com/vim-scripts/SearchComplete) lets you tab-complete words in a search ( / ).
+
+### emmet
+
+[emmet](https://github.com/mattn/emmet-vim) expands abbreviations to make writing HTML faster.
