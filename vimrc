@@ -52,6 +52,9 @@ highlight SpecialKey ctermfg=darkgreen
 " Remove trailing spaces when saving a buffer
 autocmd BufWritePre * :%s/\s\+$//e
 
+" Use htmljinja plugin to syntax highlight both HTML and twig in .twig files
+au BufRead,BufNewFile *.twig set filetype=htmljinja
+
 " Make Command-T find more files (default is 10000)
 let g:CommandTMaxFiles=25000
 

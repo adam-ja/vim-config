@@ -70,3 +70,11 @@ Whenever this plugin is installed or updated, it must be built using
     cd ~/.vim/bundle/command-t/ruby/command-t
     ruby extconf.rb
     make
+
+### vim-jinja
+
+[vim-jinja](https://github.com/mitsuhiko/vim-jinja) enables syntax highlighting for Jinja (or Twig) and HTML in the same file
+
+Adding the following to the vimrc uses this syntax highlighting on .twig files
+
+    au BufRead,BufNewFile *.twig set filetype=htmljinja
