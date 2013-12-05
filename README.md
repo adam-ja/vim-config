@@ -78,3 +78,11 @@ Whenever this plugin is installed or updated, it must be built using
 Adding the following to the vimrc uses this syntax highlighting on .twig files
 
     au BufRead,BufNewFile *.twig set filetype=htmljinja
+
+### tabular
+
+[tabular](https://github.com/godlygeek/tabular) automatically aligns text (e.g. aligning equals)
+
+To align equals, simply place the cursor somewhere in the block of text you want to align and use the command:
+
+    :Tabularize /=
