@@ -8,7 +8,7 @@ Thanks to Drew Neil for getting me started with [this vimcast](http://vimcasts.o
 
 1. Make sure ruby and vim-nox are installed (vim with ruby support is required for the Command-T plugin)
 
-        sudo apt-get install ruby-full && vim-nox
+        sudo apt-get install ruby-full vim-nox
 
 2. Clone this repo into ~/.vim
 
