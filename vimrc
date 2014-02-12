@@ -13,6 +13,9 @@ set hidden
 " Tabs are equivalent to 4 spaces
 set tabstop=4
 
+" Make backspace delete 4 spaces, not just one at a time
+set softtabstop=4
+
 " Automatic indentation uses tabs equivalent to 4 spaces
 set shiftwidth=4
 
