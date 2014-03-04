@@ -86,3 +86,7 @@ Adding the following to the vimrc uses this syntax highlighting on .twig files
 To align equals, simply place the cursor somewhere in the block of text you want to align and use the command:
 
     :Tabularize /=
+
+### VIM-LESS
+
+[VIM-LESS](https://github.com/groenewege/vim-less) is a syntax highlighter for LESS, also with indenting and autocompletion
