@@ -61,6 +61,9 @@ au BufRead,BufNewFile *.twig set filetype=htmljinja
 " Make Command-T find more files (default is 10000)
 let g:CommandTMaxFiles=25000
 
+" Shortcut for refreshing Command-T's file list
+nmap <F5> :CommandTFlush<CR>
+
 " Moving to the next/previous search match puts it in the middle of the screen
 nmap n nzz
 nmap N Nzz
