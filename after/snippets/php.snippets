@@ -1,8 +1,8 @@
 snippet varx
 	error_log(var_export(${1:var}, true));
 snippet valint
-	if (false === filter_var(${1:}, FILTER_VALIDATE_INT)) {
-		throw new \InvalidArgumentException('$1 is not an integer ' . var_export($1, true), ${2:errorcode});
+	if (!filter_var($${1:}, FILTER_VALIDATE_INT)) {
+		throw new \InvalidArgumentException('$1 is not a valid integer ' . var_export($1, true), ${2:errorcode});
 	}
 
 snippet valfloat
