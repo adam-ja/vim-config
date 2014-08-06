@@ -33,6 +33,10 @@ Where possible, plugins are managed as git submodules, so they can be easily upd
 
     git submodule foreach git pull origin master
 
+New plugins can be installed using
+
+    git submodule add http://github.com/someuser/someplugin.git ~/vim/bundle/someplugin
+
 ### Pathogen
 
 In addition to being git submodules, all plugins are installed as bundles and managed using [Pathogen](https://github.com/tpope/vim-pathogen), including Pathogen itself. A symlink is used in the autoload directory to ensure Pathogen loads with vim and brings in all the other plugins it manages.
@@ -90,3 +94,7 @@ To align equals, simply place the cursor somewhere in the block of text you want
 ### VIM-LESS
 
 [VIM-LESS](https://github.com/groenewege/vim-less) is a syntax highlighter for LESS, also with indenting and autocompletion
+
+### puppet-syntax-vim
+
+[puppet-syntax-vim](https://github.com/puppetlabs/puppet-syntax-vim) adds syntax highlighting for files used by Puppet
