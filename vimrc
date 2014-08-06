@@ -69,7 +69,7 @@ nmap n nzz
 nmap N Nzz
 
 " Shortcut for Tabularize
-nmap <F2> :Tabularize /
+map <F2> :Tabularize /
 
 " Disable arrow keys (except in insert mode) - use h,j,k,l
 noremap <Up> <NOP>
