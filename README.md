@@ -6,9 +6,9 @@ Thanks to Drew Neil for getting me started with [this vimcast](http://vimcasts.o
 
 ## Installation
 
-1. Make sure ruby and vim-nox are installed (vim with ruby support is required for the Command-T plugin)
+1. Make sure ruby and vim-gnome are installed. vim-gnome installs gvim (at least on Ubuntu) which enables copying to the system buffer (highlight a block of text, then type "+y and it will be copied to the system clipboard so you can paste it into other vim instances or other applications), and also provides the ruby support required for the Command-T plugin.
 
-        sudo apt-get install ruby-full vim-nox
+        sudo apt-get install ruby-full vim-gnome
 
 2. Clone this repo into ~/.vim
 
