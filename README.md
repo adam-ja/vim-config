@@ -35,7 +35,7 @@ Where possible, plugins are managed as git submodules, so they can be easily upd
 
 New plugins can be installed using
 
-    git submodule add http://github.com/someuser/someplugin.git ~/vim/bundle/someplugin
+    git submodule add http://github.com/someuser/someplugin.git ~/.vim/bundle/someplugin
 
 ### Pathogen
 
@@ -98,3 +98,7 @@ To align equals, simply place the cursor somewhere in the block of text you want
 ### puppet-syntax-vim
 
 [puppet-syntax-vim](https://github.com/puppetlabs/puppet-syntax-vim) adds syntax highlighting for files used by Puppet
+
+### CamelCaseMotion
+
+[CamelCaseMotion](https://github.com/bkad/CamelCaseMotion) makes it possible to navigate camel case and underscore-separated strings. Shortcuts `,w`, `,b`, and `,e` work in the same way as the standard `w`, `b`, and `e`, but where the standard shortcuts would treat SomeLongString or some_long_string as a single word, the camel case motion variants allow you to move between "some", "long" and "string". These shortcuts can also be used in conjunction with `c` and `d` to change/delete up to the next segment of the string.
