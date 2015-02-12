@@ -25,13 +25,13 @@ Thanks to Drew Neil for getting me started with [this vimcast](http://vimcasts.o
 
 ## vimrc
 
-For the persistant undo to work, the ~/.vim-undo directory must be created
+For the persistent undo to work, the ~/.vim-undo directory must be created
 
 ## Plugins
 
 Where possible, plugins are managed as git submodules, so they can be easily updated using
 
-    git submodule foreach git pull origin master
+    git submodule foreach git pull --ff-only origin master
 
 New plugins can be installed using
 

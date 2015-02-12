@@ -106,3 +106,6 @@ syntax on
 
 " Enable filetype specific plugins and auto indentation
 filetype plugin indent on
+
+" Toggle paste mode on/off with F3
+set pastetoggle=<F3>
