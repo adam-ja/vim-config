@@ -109,3 +109,6 @@ filetype plugin indent on
 
 " Toggle paste mode on/off with F3
 set pastetoggle=<F3>
+
+" Map PHP Explorer GoTo to F4
+map <F4> \gt
