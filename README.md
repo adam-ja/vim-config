@@ -7,22 +7,22 @@ Thanks to Drew Neil for getting me started with [this vimcast](http://vimcasts.o
 ## Installation
 
 1. Make sure ruby and vim-gnome are installed. vim-gnome installs gvim (at least on Ubuntu) which enables copying to the system buffer (highlight a block of text, then type "+y and it will be copied to the system clipboard so you can paste it into other vim instances or other applications), and also provides the ruby support required for the Command-T plugin.
-
-    sudo apt-get install ruby-full vim-gnome
-
+```
+sudo apt-get install ruby-full vim-gnome
+```
 2. Clone this repo into ~/.vim
-
-    git clone https://github.com/adam-ja/vim-config.git ~/.vim
-
+```
+git clone https://github.com/adam-ja/vim-config.git ~/.vim
+```
 3. Create a symlink for the vimrc (vim always expects the vimrc to be in the home directory)
-
-    ln -s ~/.vim/vimrc ~/.vimrc
-
+```
+ln -s ~/.vim/vimrc ~/.vimrc
+```
 4. Initialise the plugin submodules
-
-    cd ~/.vim
-    git submodule update --init
-
+```
+cd ~/.vim
+git submodule update --init
+```
 ## vimrc
 
 For the persistent undo to work, the ~/.vim-undo directory must be created
@@ -30,17 +30,17 @@ For the persistent undo to work, the ~/.vim-undo directory must be created
 ## Plugins
 
 Where possible, plugins are managed as git submodules, so they can be easily updated using
-
-    git submodule foreach git pull --ff-only origin master
-
+```
+git submodule foreach git pull --ff-only origin master
+```
 New plugins can be installed using
-
-    git submodule add http://github.com/someuser/someplugin.git ~/.vim/bundle/someplugin
-
+```
+git submodule add http://github.com/someuser/someplugin.git ~/.vim/bundle/someplugin
+```
 Sometimes you might see untracked changes in submodules when you run `git status` (for example when vim automatically generates documentation for a plugin and puts it in the submodule directory). If you find this annoying, you can ignore untracked changes in submodules using
-
-    for s in `git submodule  --quiet foreach 'echo $name'` ; do git config submodule.$s.ignore untracked ; done
-
+```
+for s in `git submodule  --quiet foreach 'echo $name'` ; do git config submodule.$s.ignore untracked ; done
+```
 ### Pathogen
 
 In addition to being git submodules, all plugins are installed as bundles and managed using [Pathogen](https://github.com/tpope/vim-pathogen), including Pathogen itself. A symlink is used in the autoload directory to ensure Pathogen loads with vim and brings in all the other plugins it manages.
@@ -52,9 +52,9 @@ In addition to being git submodules, all plugins are installed as bundles and ma
 ### file-line
 
 [file-line](https://github.com/bogado/file-line) allows you to open files in vim on a specific line with
-
-    vim path/to/file:lineNo
-
+```
+vim path/to/file:lineNo
+```
 ### SearchComplete
 
 [SearchComplete](https://github.com/vim-scripts/SearchComplete) lets you tab-complete words in a search ( / ).
@@ -74,27 +74,27 @@ In addition to being git submodules, all plugins are installed as bundles and ma
 It requires ruby and vim with ruby support to be installed.
 
 Whenever this plugin is installed or updated, it must be built using
-
-    cd ~/.vim/bundle/command-t/ruby/command-t
-    ruby extconf.rb
-    make
-
+```
+cd ~/.vim/bundle/command-t/ruby/command-t
+ruby extconf.rb
+make
+```
 ### vim-jinja
 
 [vim-jinja](https://github.com/mitsuhiko/vim-jinja) enables syntax highlighting for Jinja (or Twig) and HTML in the same file
 
 Adding the following to the vimrc uses this syntax highlighting on .twig files
-
-    au BufRead,BufNewFile *.twig set filetype=htmljinja
-
+```
+au BufRead,BufNewFile *.twig set filetype=htmljinja
+```
 ### tabular
 
 [tabular](https://github.com/godlygeek/tabular) automatically aligns text (e.g. aligning equals)
 
 To align equals, simply place the cursor somewhere in the block of text you want to align and use the command:
-
-    :Tabularize /=
-
+```
+:Tabularize /=
+```
 In this repo's default vimrc there is a shortcut mapped to `F2` which does the `:Tabularize /` bit for you, so you just have to type the characters you want to align around and hit return to complete the command.
 
 ### VIM-LESS
