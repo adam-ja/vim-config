@@ -40,3 +40,6 @@
 [submodule "bundle/php-explorer"]
 	path = bundle/php-explorer
 	url = https://github.com/PhilGrayson/php-explorer.git
+[submodule "bundle/ag"]
+	path = bundle/ag
+	url = https://github.com/rking/ag.vim.git

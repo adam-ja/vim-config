@@ -6,23 +6,34 @@ Thanks to Drew Neil for getting me started with [this vimcast](http://vimcasts.o
 
 ## Installation
 
-1. Make sure ruby and vim-gnome are installed. vim-gnome installs gvim (at least on Ubuntu) which enables copying to the system buffer (highlight a block of text, then type "+y and it will be copied to the system clipboard so you can paste it into other vim instances or other applications), and also provides the ruby support required for the Command-T plugin.
-```
-sudo apt-get install ruby-full vim-gnome
-```
-2. Clone this repo into ~/.vim
-```
-git clone https://github.com/adam-ja/vim-config.git ~/.vim
-```
-3. Create a symlink for the vimrc (vim always expects the vimrc to be in the home directory)
-```
-ln -s ~/.vim/vimrc ~/.vimrc
-```
-4. Initialise the plugin submodules
-```
-cd ~/.vim
-git submodule update --init
-```
+1. Make sure the following packages are installed:
+    - `ruby-full` is needed for the [Command-T](#command-t) plugin.
+    - `vim-gnome` installs gvim (at least on Ubuntu) which provides the ruby support required for [Command-T](#command-t), and also enables copying to the system buffer (highlight a block of text, then type "+y and it will be copied to the system clipboard so you can paste it into other vim instances or other applications).
+    - `silversearcher-ag` provides the [silver searcher](https://github.com/ggreer/the_silver_searcher) code searching tool used by the [ag](#ag) plugin. It can also be used on the terminal outside vim as an alternative to `grep` or `ack`.
+
+    ```
+    sudo apt-get install ruby-full vim-gnome silversearcher-ag
+    ```
+
+1. Clone this repo into ~/.vim
+
+    ```
+    git clone https://github.com/adam-ja/vim-config.git ~/.vim
+    ```
+
+1. Create a symlink for the vimrc (vim always expects the vimrc to be in the home directory)
+
+    ```
+    ln -s ~/.vim/vimrc ~/.vimrc
+    ```
+
+1. Initialise the plugin submodules
+
+    ```
+    cd ~/.vim
+    git submodule update --init
+    ```
+
 ## vimrc
 
 For the persistent undo to work, the ~/.vim-undo directory must be created
@@ -112,3 +123,7 @@ In this repo's default vimrc there is a shortcut mapped to `F2` which does the `
 ### PHP Explorer
 
 [PHP Explorer](https://github.com/PhilGrayson/php-explorer) lets you jump to a PHP class or function declaration by putting the cursor over use statements, parameter typehints, and method calls and typing `<Leader>gt`. In vim the leader key is usually `\`. This can of course be mapped to a single key - in this repo's default vimrc it is mapped to `F4`.
+
+### Ag
+
+[Ag](https://github.com/rking/ag.vim) integrates the silver searcher into vim.
