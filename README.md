@@ -127,3 +127,7 @@ In this repo's default vimrc there is a shortcut mapped to `F2` which does the `
 ### Ag
 
 [Ag](https://github.com/rking/ag.vim) integrates the silver searcher into vim.
+
+### vim-fugitive
+
+[vim-fugitive](https://github.com/tpope/vim-fugitive) provides lots of nice Git integration in vim. It gives us commands like `:Gblame` to `git blame` the current file, `:Gdiff` to show changes, and `:Gmove` to `git mv` the file and rename the buffer.
