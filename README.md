@@ -131,3 +131,7 @@ In this repo's default vimrc there is a shortcut mapped to `F2` which does the `
 ### vim-fugitive
 
 [vim-fugitive](https://github.com/tpope/vim-fugitive) provides lots of nice Git integration in vim. It gives us commands like `:Gblame` to `git blame` the current file, `:Gdiff` to show changes, and `:Gmove` to `git mv` the file and rename the buffer.
+
+### vim-multiple-cursors
+
+[vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) is a port of Sublime Text's multiple selection feature, allowing you to select and edit multiple instances of a word at once.
