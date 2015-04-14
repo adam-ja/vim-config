@@ -135,3 +135,11 @@ In this repo's default vimrc there is a shortcut mapped to `F2` which does the `
 ### vim-multiple-cursors
 
 [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) is a port of Sublime Text's multiple selection feature, allowing you to select and edit multiple instances of a word at once.
+
+### vim-airline
+
+[vim-airline](https://github.com/bling/vim-airline/) provides a nice, customisable status line.
+
+### vim-gitgutter
+
+[vim-gitgutter](https://github.com/airblade/vim-gitgutter) indicates git diff status (lines added, modified, or deleted) in the gutter (next to line numbers).

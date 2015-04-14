@@ -112,3 +112,7 @@ set pastetoggle=<F3>
 
 " Map PHP Explorer GoTo to F4
 map <F4> \gt
+
+" Use 256 colours - this seems to be important to get colorschemes working and
+" get proper colours in vim-airline
+set t_Co=256
