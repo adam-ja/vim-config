@@ -113,6 +113,13 @@ set pastetoggle=<F3>
 " Map PHP Explorer GoTo to F4
 map <F4> \gt
 
-" Use 256 colours - this seems to be important to get colorschemes working and
-" get proper colours in vim-airline
+" Use 256 colours for colorschemes
 set t_Co=256
+
+" Use molokai colorscheme
+let g:molokai_original=1
+let g:rehash256=1
+colorscheme molokai
+
+" Use luna theme rather than molokai for vim-airline
+let g:airline_theme='luna'

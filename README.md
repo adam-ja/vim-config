@@ -143,3 +143,7 @@ In this repo's default vimrc there is a shortcut mapped to `F2` which does the `
 ### vim-gitgutter
 
 [vim-gitgutter](https://github.com/airblade/vim-gitgutter) indicates git diff status (lines added, modified, or deleted) in the gutter (next to line numbers).
+
+### molokai
+
+[molokai](https://github.com/tomasr/molokai) is (in my opinion) a nice colour scheme.
