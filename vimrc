@@ -165,7 +165,7 @@ set laststatus=2
 set scrolloff=999
 " Draw a vertical line at 120 characters
 highlight ColorColumn ctermbg=DarkGrey
-set colorcolumn=80
+set colorcolumn=120
 " CtrlP match window settings (order top-to-bottom, max height 999 lines)
 let g:ctrlp_match_window='order:ttb,max:999'
 
