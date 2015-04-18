@@ -1,9 +1,67 @@
-" Pathogen
-execute pathogen#infect()
-execute pathogen#helptags()
-
-" Get rid of Vi compatibility to enable a load of vim features
+" Disable Vi compatibility to enable more powerful vim features
 set nocompatible
+
+""""""""""""
+"  VUNDLE  "
+""""""""""""
+
+" Temporarily disable filetype detection - required for vundle
+filetype off
+
+" Include vundle in the runtime path
+set rtp+=~/.vim/bundle/Vundle.vim
+
+" Initialise vundle to install plugins to ~/.vim/bundle
+call vundle#begin('~/.vim/bundle')
+
+" Let vundle manage itself (required)
+Plugin 'gmarik/Vundle.vim'
+
+" Files & Buffers
+"-----------------
+Plugin 'kien/ctrlp.vim'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'bogado/file-line'
+Plugin 'rking/ag.vim'
+Plugin 'PhilGrayson/php-explorer'
+
+" Syntax
+"--------
+Plugin 'scrooloose/syntastic'
+Plugin 'Glench/Vim-Jinja2-Syntax'
+Plugin 'groenewege/vim-less'
+Plugin 'rodjek/vim-puppet'
+
+" Utilities
+"-----------
+Plugin 'mattn/emmet-vim'
+Plugin 'vim-scripts/SearchComplete'
+Plugin 'MarcWeber/vim-addon-mw-utils' " Required for vim-snipmate
+Plugin 'tomtom/tlib_vim' " Required for vim-snipmate
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'bkad/CamelCaseMotion'
+Plugin 'godlygeek/tabular'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'bling/vim-airline'
+
+" Git integration
+"-----------------
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+
+" Colour schemes
+"----------------
+Plugin 'tomasr/molokai'
+
+" End vundle
+call vundle#end()
+
+
+
+""""""""""""
+"  CONFIG  "
+""""""""""""
 
 " Hides buffers instead of closing them
 " This means undos are preserved when switching between buffers

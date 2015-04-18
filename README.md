@@ -58,7 +58,7 @@ In addition to being git submodules, all plugins are installed as bundles and ma
 
 ### BufExplorer
 
-[BufExplorer](https://github.com/vim-scripts/bufexplorer.zip) provides quick and easy switching between open buffers.
+[BufExplorer](https://github.com/jlanzarotta/bufexplorer) provides quick and easy switching between open buffers.
 
 ### file-line
 
