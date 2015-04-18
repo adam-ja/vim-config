@@ -1,149 +1,57 @@
 # vim-config
 
-My vimrc settings and plugins
-
-Thanks to Drew Neil for getting me started with [this vimcast](http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/)
+My vim settings and plugins
 
 ## Installation
 
-1. Make sure the following packages are installed:
-    - `ruby-full` is needed for the [Command-T](#command-t) plugin.
-    - `vim-gnome` installs gvim (at least on Ubuntu) which provides the ruby support required for [Command-T](#command-t), and also enables copying to the system buffer (highlight a block of text, then type "+y and it will be copied to the system clipboard so you can paste it into other vim instances or other applications).
-    - `silversearcher-ag` provides the [silver searcher](https://github.com/ggreer/the_silver_searcher) code searching tool used by the [ag](#ag) plugin. It can also be used on the terminal outside vim as an alternative to `grep` or `ack`.
+The included `install.sh` script will install/update any packages you need (assuming you're on a Debian-based system), create any required directories, and install/update the vim plugins specified in the `vimrc` file.
 
-    ```
-    sudo apt-get install ruby-full vim-gnome silversearcher-ag
-    ```
-
-1. Clone this repo into ~/.vim
-
-    ```
-    git clone https://github.com/adam-ja/vim-config.git ~/.vim
-    ```
-
-1. Create a symlink for the vimrc (vim always expects the vimrc to be in the home directory)
-
-    ```
-    ln -s ~/.vim/vimrc ~/.vimrc
-    ```
-
-1. Initialise the plugin submodules
-
-    ```
-    cd ~/.vim
-    git submodule update --init
-    ```
-
+**IMPORTANT**: The `install.sh` script will remove any vim plugins you already have installed if they are not specified to be managed by `Vundle` in the `vimrc` file
+```sh
+git clone https://github.com/adam-ja/vim-config.git ~/.vim
+~/.vim/install.sh
+```
 ## vimrc
 
-For the persistent undo to work, the ~/.vim-undo directory must be created
+Pretty much everything in the `vimrc` file is commented with at least a brief explanation. For more details, try vim help (`:help whatever`) or Google.
 
 ## Plugins
 
-Where possible, plugins are managed as git submodules, so they can be easily updated using
-```
-git submodule foreach git pull --ff-only origin master
-```
-New plugins can be installed using
-```
-git submodule add http://github.com/someuser/someplugin.git ~/.vim/bundle/someplugin
-```
-Sometimes you might see untracked changes in submodules when you run `git status` (for example when vim automatically generates documentation for a plugin and puts it in the submodule directory). If you find this annoying, you can ignore untracked changes in submodules using
-```
-for s in `git submodule  --quiet foreach 'echo $name'` ; do git config submodule.$s.ignore untracked ; done
-```
-### Pathogen
+All vim plugins are managed by [Vundle](https://github.com/gmarik/Vundle.vim), including Vundle itself. Plugins are specified in the `vimrc` file. When inside vim, `:PluginInstall` will install any specified plugins that are missing, `:PluginInstall` will install new plugins and update existing ones, and `:PluginUpdate` will just update those that are already installed. For more information, go [here](https://github.com/gmarik/Vundle.vim) or see the vimdoc (`:help vundle`).
 
-In addition to being git submodules, all plugins are installed as bundles and managed using [Pathogen](https://github.com/tpope/vim-pathogen), including Pathogen itself. A symlink is used in the autoload directory to ensure Pathogen loads with vim and brings in all the other plugins it manages.
+Below is a list of all the plugins included in this repo's `vimrc` file, with a brief description. To find out more, click through to the plugin's gitub page or, once you've installed the plugin, try `:help plugin-name`.
 
-### BufExplorer
+### Files & Buffers
 
-[BufExplorer](https://github.com/jlanzarotta/bufexplorer) provides quick and easy switching between open buffers.
+- [CtrlP](https://github.com/kien/ctrlp.vim) is a powerful fuzzy finder for finding and opening files and buffers in a project.
+- [BufExplorer](https://github.com/jlanzarotta/bufexplorer) provides quick and easy switching between open buffers.
+- [file-line](https://github.com/bogado/file-line) allows you to open files in vim on a specific line with `vim path/to/file:lineNo`
+- [ag.vim](https://github.com/rking/ag.vim) integrates [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) into vim.
+- [PHP Explorer](https://github.com/PhilGrayson/php-explorer) lets you jump to a PHP class or function declaration from use statements, parameter typehints, and method calls under the cursor with `<Leader>gt` (mapped to `<F4>` in this repo's `vimrc`).
 
-### file-line
+### Syntax
 
-[file-line](https://github.com/bogado/file-line) allows you to open files in vim on a specific line with
-```
-vim path/to/file:lineNo
-```
-### SearchComplete
+- [Syntastic](https://github.com/scrooloose/syntastic) is a syntax checker that notifies of syntax errors on file save.
+- [Vim-Jinja2-Syntax](https://github.com/Glench/Vim-Jinja2-Syntax) provides syntax highlighting for HTML and Jinja (which Twig is based on).
+- [vim-less](https://github.com/groenewege/vim-less) provides syntax highlighting for LESS.
+- [vim-puppet](https://github.com/rodjek/vim-puppet) provides syntax highlighting for Puppet.
 
-[SearchComplete](https://github.com/vim-scripts/SearchComplete) lets you tab-complete words in a search ( / ).
+### Utilities
 
-### emmet
+- [emmet-vim](https://github.com/mattn/emmet-vim) expands abbreviations to make writing HTML faster.
+- [SearchComplete](https://github.com/vim-scripts/SearchComplete) lets you tab-complete words when searching (`/`).
+- [vim-snipmate](https://github.com/garbas/vim-snipmate) expands snippets of text to pre-defined code templates.
+- [vim-snippets](https://github.com/honza/vim-snippets) provides common snippets for various programming languages for use with snipmate.
+- [CamelCaseMotion](https://github.com/bkad/CamelCaseMotion) provides `,w`, `,b`, and `,e` motions to move within CamelCase and underscore_separated strings in the same way as the default `w`, `b`, and `e` motions move between words.
+- [tabular](https://github.com/godlygeek/tabular) automatically aligns text (e.g. aligning equals) on multiple lines. This repo's `vimrc` maps the shortcut `<F2>`, so `<F2>=` will align the `=` on all surrounding lines.
+- [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) is a port of Sublime Text's multiple selection feature, allowing you to select and edit multiple instances of a word at once.
 
-[emmet](https://github.com/mattn/emmet-vim) expands abbreviations to make writing HTML faster.
+### Git integration
 
-### snipmate
+- [vim-fugitive](https://github.com/tpope/vim-fugitive) provides commands like `:Gblame` to `git blame` the current file, `:Gdiff` to show changes, and `:Gmove` to `git mv` the file and rename the buffer.
+- [vim-gitgutter](https://github.com/airblade/vim-gitgutter) indicates git diff status (lines added, modified, or deleted) in the gutter (next to line numbers).
 
-[snipmate](https://github.com/msanders/snipmate.vim) allows you to insert snippets of text by typing some trigger word followed by tab.
+### UI / styling
 
-### Command-T
-
-[Command-T](https://github.com/wincent/Command-T) provides an extremely fast way to open files simply by typing characters that appear in their paths.
-
-It requires ruby and vim with ruby support to be installed.
-
-Whenever this plugin is installed or updated, it must be built using
-```
-cd ~/.vim/bundle/command-t/ruby/command-t
-ruby extconf.rb
-make
-```
-### vim-jinja
-
-[vim-jinja](https://github.com/mitsuhiko/vim-jinja) enables syntax highlighting for Jinja (or Twig) and HTML in the same file
-
-Adding the following to the vimrc uses this syntax highlighting on .twig files
-```
-au BufRead,BufNewFile *.twig set filetype=htmljinja
-```
-### tabular
-
-[tabular](https://github.com/godlygeek/tabular) automatically aligns text (e.g. aligning equals)
-
-To align equals, simply place the cursor somewhere in the block of text you want to align and use the command:
-```
-:Tabularize /=
-```
-In this repo's default vimrc there is a shortcut mapped to `F2` which does the `:Tabularize /` bit for you, so you just have to type the characters you want to align around and hit return to complete the command.
-
-### VIM-LESS
-
-[VIM-LESS](https://github.com/groenewege/vim-less) is a syntax highlighter for LESS, also with indenting and autocompletion
-
-### puppet-syntax-vim
-
-[puppet-syntax-vim](https://github.com/puppetlabs/puppet-syntax-vim) adds syntax highlighting for files used by Puppet
-
-### CamelCaseMotion
-
-[CamelCaseMotion](https://github.com/bkad/CamelCaseMotion) makes it possible to navigate camel case and underscore-separated strings. Shortcuts `,w`, `,b`, and `,e` work in the same way as the standard `w`, `b`, and `e`, but where the standard shortcuts would treat SomeLongString or some_long_string as a single word, the camel case motion variants allow you to move between "some", "long" and "string". These shortcuts can also be used in conjunction with `c` and `d` to change/delete up to the next segment of the string.
-
-### PHP Explorer
-
-[PHP Explorer](https://github.com/PhilGrayson/php-explorer) lets you jump to a PHP class or function declaration by putting the cursor over use statements, parameter typehints, and method calls and typing `<Leader>gt`. In vim the leader key is usually `\`. This can of course be mapped to a single key - in this repo's default vimrc it is mapped to `F4`.
-
-### Ag
-
-[Ag](https://github.com/rking/ag.vim) integrates the silver searcher into vim.
-
-### vim-fugitive
-
-[vim-fugitive](https://github.com/tpope/vim-fugitive) provides lots of nice Git integration in vim. It gives us commands like `:Gblame` to `git blame` the current file, `:Gdiff` to show changes, and `:Gmove` to `git mv` the file and rename the buffer.
-
-### vim-multiple-cursors
-
-[vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) is a port of Sublime Text's multiple selection feature, allowing you to select and edit multiple instances of a word at once.
-
-### vim-airline
-
-[vim-airline](https://github.com/bling/vim-airline/) provides a nice, customisable status line.
-
-### vim-gitgutter
-
-[vim-gitgutter](https://github.com/airblade/vim-gitgutter) indicates git diff status (lines added, modified, or deleted) in the gutter (next to line numbers).
-
-### molokai
-
-[molokai](https://github.com/tomasr/molokai) is (in my opinion) a nice colour scheme.
+- [vim-airline](https://github.com/bling/vim-airline/) provides a nice, customisable status line. It also integrates with `vim-gitgutter` to show the current branch name and a count of modified, added, and removed lines.
+- [molokai](https://github.com/tomasr/molokai) is (in my opinion) a nice colour scheme, and there's a matching `vim-airline` theme.
