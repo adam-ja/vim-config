@@ -194,3 +194,6 @@ let g:ctrlp_max_files=0
 let g:ctrlp_open_new_file='r'
 " Open multiple files opened by CtrlP as hidden buffers
 let g:ctrlp_open_multiple_files='i'
+
+" Write swapfile 1 second after typing ends (for faster realtime gitgutter)
+set updatetime=1000

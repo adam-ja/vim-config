@@ -21,7 +21,7 @@ All vim plugins are managed by [Vundle](https://github.com/gmarik/Vundle.vim), i
 
 Below is a list of all the plugins included in this repo's `vimrc` file, with a brief description. To find out more, click through to the plugin's gitub page or, once you've installed the plugin, try `:help plugin-name`.
 
-### Files & Buffers
+#### Files & Buffers
 
 - [CtrlP](https://github.com/kien/ctrlp.vim) is a powerful fuzzy finder for finding and opening files and buffers in a project.
 - [BufExplorer](https://github.com/jlanzarotta/bufexplorer) provides quick and easy switching between open buffers.
@@ -29,14 +29,14 @@ Below is a list of all the plugins included in this repo's `vimrc` file, with a 
 - [ag.vim](https://github.com/rking/ag.vim) integrates [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) into vim.
 - [PHP Explorer](https://github.com/PhilGrayson/php-explorer) lets you jump to a PHP class or function declaration from use statements, parameter typehints, and method calls under the cursor with `<Leader>gt` (mapped to `<F4>` in this repo's `vimrc`).
 
-### Syntax
+#### Syntax
 
 - [Syntastic](https://github.com/scrooloose/syntastic) is a syntax checker that notifies of syntax errors on file save.
 - [Vim-Jinja2-Syntax](https://github.com/Glench/Vim-Jinja2-Syntax) provides syntax highlighting for HTML and Jinja (which Twig is based on).
 - [vim-less](https://github.com/groenewege/vim-less) provides syntax highlighting for LESS.
 - [vim-puppet](https://github.com/rodjek/vim-puppet) provides syntax highlighting for Puppet.
 
-### Utilities
+#### Utilities
 
 - [emmet-vim](https://github.com/mattn/emmet-vim) expands abbreviations to make writing HTML faster.
 - [SearchComplete](https://github.com/vim-scripts/SearchComplete) lets you tab-complete words when searching (`/`).
@@ -46,12 +46,12 @@ Below is a list of all the plugins included in this repo's `vimrc` file, with a 
 - [tabular](https://github.com/godlygeek/tabular) automatically aligns text (e.g. aligning equals) on multiple lines. This repo's `vimrc` maps the shortcut `<F2>`, so `<F2>=` will align the `=` on all surrounding lines.
 - [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) is a port of Sublime Text's multiple selection feature, allowing you to select and edit multiple instances of a word at once.
 
-### Git integration
+#### Git integration
 
 - [vim-fugitive](https://github.com/tpope/vim-fugitive) provides commands like `:Gblame` to `git blame` the current file, `:Gdiff` to show changes, and `:Gmove` to `git mv` the file and rename the buffer.
 - [vim-gitgutter](https://github.com/airblade/vim-gitgutter) indicates git diff status (lines added, modified, or deleted) in the gutter (next to line numbers).
 
-### UI / styling
+#### UI / styling
 
 - [vim-airline](https://github.com/bling/vim-airline/) provides a nice, customisable status line. It also integrates with `vim-gitgutter` to show the current branch name and a count of modified, added, and removed lines.
 - [molokai](https://github.com/tomasr/molokai) is (in my opinion) a nice colour scheme, and there's a matching `vim-airline` theme.
