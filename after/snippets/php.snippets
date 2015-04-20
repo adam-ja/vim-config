@@ -6,7 +6,7 @@ snippet zfclass
 	<?php
 	namespace ${1:namespace};
 
-	final class ${2:classname}
+	final class ${2:`vim_snippets#Filename()`}
 	{
 		public function __construct()
 		{
@@ -19,7 +19,7 @@ snippet zffactory
 	use Zend\ServiceManager\FactoryInterface;
 	use Zend\ServiceManager\ServiceLocatorInterface;
 
-	final class ${2:Factory} implements FactoryInterface
+	final class ${2:`vim_snippets#Filename()`} implements FactoryInterface
 	{
 		public function createService(ServiceLocatorInterface $serviceLocator)
 		{
@@ -30,7 +30,7 @@ snippet unittest
 	<?php
 	namespace ${1:namespace};
 
-	final class ${2:Test} extends \PHPUnit_Framework_TestCase
+	final class ${2:`vim_snippets#Filename()`} extends \PHPUnit_Framework_TestCase
 	{
 		public function setUp()
 		{
