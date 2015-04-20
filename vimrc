@@ -20,7 +20,7 @@ Plugin 'gmarik/Vundle.vim'
 " Files & Buffers
 "-----------------
 Plugin 'kien/ctrlp.vim'
-Plugin 'jlanzarotta/bufexplorer'
+Plugin 'd11wtq/ctrlp_bdelete.vim'
 Plugin 'bogado/file-line'
 Plugin 'rking/ag.vim'
 Plugin 'PhilGrayson/php-explorer'
@@ -103,8 +103,6 @@ filetype plugin indent on
 set list
 " Highlight tabs and trailing spaces
 set listchars=tab:\|·,trail:`
-" BufExplorer has a bug that sets list off. This fixes it
-autocmd BufEnter,BufNew,BufRead,BufNewFile * set list
 " Set the colour for highlighted stuff
 highlight SpecialKey ctermfg=darkgreen
 " Remove trailing spaces when saving a buffer
@@ -140,6 +138,8 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 " Command-T muscle memory for CtrlP
 nmap <Leader>t <C-p>
+" Open CtrlP in find buffer mode with \b
+nmap <Leader>b :CtrlPBuffer<CR>
 
 
 " UI / styling
@@ -199,6 +199,8 @@ let g:ctrlp_max_files=0
 let g:ctrlp_open_new_file='r'
 " Open multiple files opened by CtrlP as hidden buffers
 let g:ctrlp_open_multiple_files='i'
+" Initialise the CtrlP delete plugin
+call ctrlp_bdelete#init()
 
 " Write swapfile 1 second after typing ends (for faster realtime gitgutter)
 set updatetime=1000

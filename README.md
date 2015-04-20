@@ -24,7 +24,7 @@ Below is a list of all the plugins included in this repo's `vimrc` file, with a 
 #### Files & Buffers
 
 - [CtrlP](https://github.com/kien/ctrlp.vim) is a powerful fuzzy finder for finding and opening files and buffers in a project.
-- [BufExplorer](https://github.com/jlanzarotta/bufexplorer) provides quick and easy switching between open buffers.
+- [ctrlp_bdelete.vim](https://github.com/d11wtq/ctrlp_bdelete.vim) is an extension to CtrlP that makes it possible to close open buffers in CtrlP's buffer mode.
 - [file-line](https://github.com/bogado/file-line) allows you to open files in vim on a specific line with `vim path/to/file:lineNo`
 - [ag.vim](https://github.com/rking/ag.vim) integrates [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) into vim.
 - [PHP Explorer](https://github.com/PhilGrayson/php-explorer) lets you jump to a PHP class or function declaration from use statements, parameter typehints, and method calls under the cursor with `<Leader>gt` (mapped to `<F4>` in this repo's `vimrc`).
