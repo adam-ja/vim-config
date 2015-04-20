@@ -187,7 +187,12 @@ set wildmode=list:longest,full
 set hidden
 
 " Ignore matching paths in CtrlP searches
-let g:ctrlp_custom_ignore='build/'
+let g:ctrlp_custom_ignore= {
+    \ 'dir': '\.git$\|build$\|node_modules$',
+    \ 'file': '\.sw[a-z]$',
+    \ }
+" Scan for hidden files and directories
+let g:ctrlp_show_hidden=1
 " Remove the limit on number of files for CtrlP to scan
 let g:ctrlp_max_files=0
 " Open new files created by CtrlP in the current window
