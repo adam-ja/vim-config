@@ -176,6 +176,8 @@ let g:rehash256=1
 colorscheme molokai
 " Use luna theme rather than molokai for vim-airline
 let g:airline_theme='luna'
+" Use powerline font for nice VCS symbols for vim-airline
+let g:airline_powerline_fonts=1
 " Automatically change the screen title
 set title
 " Show line numbers
