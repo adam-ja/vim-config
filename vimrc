@@ -20,6 +20,7 @@ Plugin 'gmarik/Vundle.vim'
 " Files & Buffers
 "-----------------
 Plugin 'kien/ctrlp.vim'
+Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'd11wtq/ctrlp_bdelete.vim'
 Plugin 'bogado/file-line'
 Plugin 'rking/ag.vim'
@@ -115,6 +116,28 @@ set showmatch
 runtime macros/matchit.vim
 
 
+" CtrlP
+"-------
+
+" Use ag for faster indexing
+let g:ctrlp_user_command = 'ag %s --ignore-case --skip-vcs-ignores --hidden --nocolor --nogroup
+    \ --ignore ".git/"
+    \ --ignore "build/"
+    \ --ignore "node_modules"
+    \ --ignore "\.sw[a-z]"
+    \ -g ""'
+" Use the faster ctrlp-py-matcher to speed up matching
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+" Open new files created by CtrlP in the current window
+let g:ctrlp_open_new_file='r'
+" Open multiple files opened by CtrlP as hidden buffers
+let g:ctrlp_open_multiple_files='i'
+" Only update match window after typing has stopped for 100ms
+let g:ctrlp_lazy_update=100
+" Initialise the CtrlP delete plugin
+call ctrlp_bdelete#init()
+
+
 " Key mapping
 "-------------
 
@@ -185,22 +208,6 @@ set wildmode=list:longest,full
 
 " Hide (rather than close) abandoned buffers, to preserve undos and remember unsaved changes
 set hidden
-
-" Ignore matching paths in CtrlP searches
-let g:ctrlp_custom_ignore= {
-    \ 'dir': '\.git$\|build$\|node_modules$',
-    \ 'file': '\.sw[a-z]$',
-    \ }
-" Scan for hidden files and directories
-let g:ctrlp_show_hidden=1
-" Remove the limit on number of files for CtrlP to scan
-let g:ctrlp_max_files=0
-" Open new files created by CtrlP in the current window
-let g:ctrlp_open_new_file='r'
-" Open multiple files opened by CtrlP as hidden buffers
-let g:ctrlp_open_multiple_files='i'
-" Initialise the CtrlP delete plugin
-call ctrlp_bdelete#init()
 
 " Write swapfile 1 second after typing ends (for faster realtime gitgutter)
 set updatetime=1000
