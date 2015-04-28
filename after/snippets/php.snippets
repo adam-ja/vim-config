@@ -1,12 +1,12 @@
 snippet varx
-	var_export(${1:var}, true);
+	var_export(${1:var}, true)
 snippet err
 	error_log(var_export(${1:var}, true));
 snippet zfclass
 	<?php
 	namespace ${1:namespace};
 
-	final class ${2:`vim_snippets#Filename()`}
+	class ${2:`vim_snippets#Filename()`}
 	{
 		public function __construct()
 		{
@@ -19,7 +19,7 @@ snippet zffactory
 	use Zend\ServiceManager\FactoryInterface;
 	use Zend\ServiceManager\ServiceLocatorInterface;
 
-	final class ${2:`vim_snippets#Filename()`} implements FactoryInterface
+	class ${2:`vim_snippets#Filename()`} implements FactoryInterface
 	{
 		public function createService(ServiceLocatorInterface $serviceLocator)
 		{
@@ -30,7 +30,7 @@ snippet unittest
 	<?php
 	namespace ${1:namespace};
 
-	final class ${2:`vim_snippets#Filename()`} extends \PHPUnit_Framework_TestCase
+	class ${2:`vim_snippets#Filename()`} extends \PHPUnit_Framework_TestCase
 	{
 		public function setUp()
 		{
