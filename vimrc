@@ -211,5 +211,5 @@ set wildmode=list:longest,full
 " Hide (rather than close) abandoned buffers, to preserve undos and remember unsaved changes
 set hidden
 
-" Write swapfile 1 second after typing ends (for faster realtime gitgutter)
-set updatetime=1000
+" Write swapfile 2 seconds after typing ends (for faster realtime gitgutter)
+set updatetime=2000
