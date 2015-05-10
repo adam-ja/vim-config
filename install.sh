@@ -20,10 +20,6 @@ echo "Installing powerline fonts..."
 cd ~/powerline-fonts
 source install.sh
 cd -
-echo "Setting Gnome terminal font to Ubuntu Mono for Powerline..."
-# Replace "Default" with preferred terminal profile
-gconftool-2 --set /apps/gnome-terminal/profiles/Default/use_system_font --type bool false
-gconftool-2 --set /apps/gnome-terminal/profiles/Default/font --type string "Ubuntu Mono derivative Powerline 13"
 
 # Make directories for vim plugins and persistent undo
 echo "Creating required directories..."
@@ -45,3 +41,4 @@ echo "Installing/updating managed plugins..."
 vim +PluginInstall! +qall
 
 echo "Finished vim setup."
+printf "\nIMPORTANT: You must now change the font in your terminal profile to a powerline font for the nice symbols in vim-airline to work.\n\n"
