@@ -49,6 +49,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-commentary'
+Plugin 'jiangmiao/auto-pairs'
 
 
 " Git integration

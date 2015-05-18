@@ -50,6 +50,7 @@ Below is a list of all the plugins included in this repo's `vimrc` file, with a 
 - [vim-speeddating](https://github.com/tpope/vim-speeddating) fixes Vim increment (`<C-A>`) and decrement (`<C-X>`) commands for dates, times, etc.
 - [vim-abolish](https://github.com/tpope/vim-abolish) lets you easily substitute or configure abbreviations for all case variants and more. It also provides shortcuts for switching text between camelCase, MixedCase, etc.
 - [vim-commentary](https://github.com/tpope/vim-commentary) provides shortcuts to comment and uncomment lines and blocks of text.
+- [auto-pairs](https://github.com/jiangmiao/auto-pairs) inserts and deletes brackets and quotes in pairs.
 
 #### Git integration
 
