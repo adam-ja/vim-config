@@ -45,6 +45,11 @@ Below is a list of all the plugins included in this repo's `vimrc` file, with a 
 - [CamelCaseMotion](https://github.com/bkad/CamelCaseMotion) provides `,w`, `,b`, and `,e` motions to move within CamelCase and underscore_separated strings in the same way as the default `w`, `b`, and `e` motions move between words.
 - [tabular](https://github.com/godlygeek/tabular) automatically aligns text (e.g. aligning equals) on multiple lines. This repo's `vimrc` maps the shortcut `<F2>`, so `<F2>=` will align the `=` on all surrounding lines.
 - [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) is a port of Sublime Text's multiple selection feature, allowing you to select and edit multiple instances of a word at once.
+- [vim-repeat](https://github.com/tpope/vim-repeat) extends the repeat command (`.`) beyond native Vim commands to supported plugins.
+- [vim-surround](https://github.com/tpope/vim-surround) enables shortcuts to add, delete and edit pairs of surroundings (brackets, quotes, tags) around text.
+- [vim-speeddating](https://github.com/tpope/vim-speeddating) fixes Vim increment (`<C-A>`) and decrement (`<C-X>`) commands for dates, times, etc.
+- [vim-abolish](https://github.com/tpope/vim-abolish) lets you easily substitute or configure abbreviations for all case variants and more. It also provides shortcuts for switching text between camelCase, MixedCase, etc.
+- [vim-commentary](https://github.com/tpope/vim-commentary) provides shortcuts to comment and uncomment lines and blocks of text.
 
 #### Git integration
 

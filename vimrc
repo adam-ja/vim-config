@@ -44,6 +44,12 @@ Plugin 'honza/vim-snippets'
 Plugin 'bkad/CamelCaseMotion'
 Plugin 'godlygeek/tabular'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-speeddating'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-commentary'
+
 
 " Git integration
 "-----------------
