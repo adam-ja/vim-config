@@ -32,7 +32,7 @@ Below is a list of all the plugins included in this repo's `vimrc` file, with a 
 #### Syntax
 
 - [Syntastic](https://github.com/scrooloose/syntastic) is a syntax checker that notifies of syntax errors on file save.
-- [Vim-Jinja2-Syntax](https://github.com/Glench/Vim-Jinja2-Syntax) provides syntax highlighting for HTML and Jinja (which Twig is based on).
+- [vim-jinja](https://github.com/mitsuhiko/vim-jinja) provides syntax highlighting for HTML and Jinja (which Twig is based on).
 - [vim-less](https://github.com/groenewege/vim-less) provides syntax highlighting for LESS.
 - [vim-puppet](https://github.com/rodjek/vim-puppet) provides syntax highlighting for Puppet.
 

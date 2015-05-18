@@ -29,7 +29,7 @@ Plugin 'PhilGrayson/php-explorer'
 " Syntax
 "--------
 Plugin 'scrooloose/syntastic'
-Plugin 'Glench/Vim-Jinja2-Syntax'
+Plugin 'mitsuhiko/vim-jinja'
 Plugin 'groenewege/vim-less'
 Plugin 'rodjek/vim-puppet'
 
