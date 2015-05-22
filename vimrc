@@ -62,6 +62,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'tomasr/molokai'
 Plugin 'Yggdroot/indentLine'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'edkolev/promptline.vim'
 
 " End vundle
 call vundle#end()
