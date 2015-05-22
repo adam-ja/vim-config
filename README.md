@@ -61,3 +61,4 @@ Below is a list of all the plugins included in this repo's `vimrc` file, with a 
 
 - [vim-airline](https://github.com/bling/vim-airline/) provides a nice, customisable status line. It also integrates with `vim-gitgutter` to show the current branch name and a count of modified, added, and removed lines.
 - [molokai](https://github.com/tomasr/molokai) is (in my opinion) a nice colour scheme, and there's a matching `vim-airline` theme.
+- [indentLine](https://github.com/Yggdroot/indentLine) highlights indentation for code indented with spaces.

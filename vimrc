@@ -61,6 +61,7 @@ Plugin 'airblade/vim-gitgutter'
 "--------------
 Plugin 'bling/vim-airline'
 Plugin 'tomasr/molokai'
+Plugin 'Yggdroot/indentLine'
 
 " End vundle
 call vundle#end()
@@ -200,6 +201,11 @@ highlight ColorColumn ctermbg=DarkGrey
 set colorcolumn=120
 " CtrlP match window settings (order top-to-bottom, max height 999 lines)
 let g:ctrlp_match_window='order:ttb,max:999'
+" Highlight each leading space in indentation
+let g:indentLine_leadingSpaceChar='·'
+let g:indentLine_leadingSpaceEnabled=1
+" Set the indentation highlight colour (subtle grey against molokai background)
+let g:indentLine_color_term=237
 
 
 " Other
