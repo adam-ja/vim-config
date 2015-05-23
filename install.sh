@@ -3,42 +3,32 @@
 # Automatically exit this script if any command fails
 set -e
 
-echo "Starting vim setup..."
+dir=$(dirname $(readlink -f "$BASH_SOURCE"))
 
 # Install dependencies
-echo "Installing dependencies..."
-sudo apt-get install silversearcher-ag vim-gnome git
+sudo apt-get install silversearcher-ag vim-gnome
 
 # Install Powerline fonts for nice VCS symbols in vim-airline
-if [ ! -e ~/powerline-fonts/install.sh ]
+powerline_dir=${HOME}/powerline-fonts
+if [ -e $powerline_dir/install.sh ]
 then
-    echo "Cloning powerline fonts..."
-    git clone https://github.com/powerline/fonts.git ~/powerline-fonts
+    (cd $powerline_dir; git pull)
+else
+    git clone https://github.com/powerline/fonts.git $powerline_dir
 fi
-echo "Installing powerline fonts..."
-# Powerline fonts' install.sh only works when run from the directory it lives in
-cd ~/powerline-fonts
-source install.sh
-cd -
+$powerline_dir/install.sh
 
 # Make directories for vim plugins and persistent undo
-echo "Creating required directories..."
-mkdir -p ~/.vim/bundle ~/vim-undo
+mkdir -p ${HOME}/.vim/bundle ${HOME}/vim-undo
 
+vundle_path=$dir/bundle/Vundle.vim
 # Clone Vundle to manage plugins
-if [ ! -e ~/.vim/bundle/Vundle.vim ]
+if [ ! -e $vundle_path ]
 then
-    echo "Cloning vundle..."
-    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    git clone https://github.com/gmarik/Vundle.vim.git $vundle_path
 fi
 
-# Remove any plugins not specified with Vundle in vimrc
-echo "Removing unmanaged plugins..."
-vim +PluginClean! +qall
+# Install/Update all plugins specified with Vundle in vimrc, and remove any not specified
+vim +PluginClean! +PluginInstall! +qall
 
-# Install/Update all plugins specified with Vundle in vimrc
-echo "Installing/updating managed plugins..."
-vim +PluginInstall! +qall
-
-echo "Finished vim setup."
 printf "\nIMPORTANT: You must now change the font in your terminal profile to a powerline font for the nice symbols in vim-airline to work.\n\n"
