@@ -38,10 +38,9 @@ snippet unittest
 		}
 	}
 snippet setter
-	public function set${1:ParamName}($${2:paramName})
+	${1:public} function set${2:ParamName}($${3:paramName})
 	{
-		$this->$2 = $$2;
-		return $this;
+		$this->$3 = $$3;
 	}
 snippet getter
 	public function get${1:ParamName}()
@@ -49,13 +48,12 @@ snippet getter
 		return $this->${2:paramName};
 	}
 snippet getset
-	public function set${1:ParamName}($${2:paramName})
+	${1:public} function set${2:ParamName}($${3:paramName})
 	{
-		$this->$2 = $$2;
-		return $this;
+		$this->$3 = $$3;
 	}
 
-	public function get$1()
+	public function get$2()
 	{
-		return $this->$2;
+		return $this->$3;
 	}
