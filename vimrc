@@ -117,9 +117,9 @@ set listchars=tab:\|·,trail:`
 " Set the colour for highlighted stuff
 highlight SpecialKey ctermfg=darkgreen
 " Remove trailing spaces when saving a buffer
-autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
 " Use htmljinja plugin to syntax highlight both HTML and twig in .twig files
-au BufRead,BufNewFile *.twig set filetype=htmljinja
+autocmd BufRead,BufNewFile *.twig set filetype=htmljinja
 " When a bracket is inserted, briefly jump to the matching one
 set showmatch
 " Extended % matching (if/else, XML tags, etc as well as standard brackets)
@@ -228,3 +228,20 @@ set hidden
 
 " Write swapfile 2 seconds after typing ends (for faster realtime gitgutter)
 set updatetime=2000
+
+
+" Functions
+"-----------
+
+" http://technotales.wordpress.com/2010/03/31/preserve-a-vim-function-that-keeps-your-state/
+function! Preserve(command)
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    execute a:command
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
