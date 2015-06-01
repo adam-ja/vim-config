@@ -145,8 +145,9 @@ let g:ctrlp_open_multiple_files='i'
 " Only update match window after typing has stopped for 100ms
 let g:ctrlp_lazy_update=100
 " Initialise the CtrlP delete plugin
-call ctrlp_bdelete#init()
-
+if (!empty(glob("~/.vim/bundle/ctrlp_bdelete.vim")))
+    call ctrlp_bdelete#init()
+endif
 
 " Key mapping
 "-------------
@@ -181,9 +182,11 @@ nmap <Leader>b :CtrlPBuffer<CR>
 " Use 256 colours for colorschemes
 set t_Co=256
 " Use molokai colorscheme
-let g:molokai_original=1
-let g:rehash256=1
-colorscheme molokai
+if (!empty(glob("~/.vim/bundle/molokai")))
+    let g:molokai_original=1
+    let g:rehash256=1
+    colorscheme molokai
+endif
 " Use luna theme rather than molokai for vim-airline
 let g:airline_theme='luna'
 " Use powerline font for nice VCS symbols for vim-airline
