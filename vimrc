@@ -212,6 +212,16 @@ let g:indentLine_leadingSpaceEnabled=1
 " Set the indentation highlight colour (subtle grey against molokai background)
 let g:indentLine_color_term=237
 
+" Promptline config
+let g:promptline_theme='airline'
+let g:promptline_preset={
+    \'a': [ '%*' ],
+    \'b': [ promptline#slices#host({'only_if_ssh':1}), promptline#slices#user() ],
+    \'c': [ promptline#slices#cwd() ],
+    \'x': [ promptline#slices#vcs_branch() ],
+    \'y': [ promptline#slices#git_status() ]
+\}
+
 
 " Other
 "-------
