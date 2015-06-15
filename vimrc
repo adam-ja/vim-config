@@ -134,7 +134,6 @@ let g:ctrlp_user_command = 'ag %s --ignore-case --skip-vcs-ignores --hidden --no
     \ --ignore ".git/"
     \ --ignore "build/"
     \ --ignore "node_modules"
-    \ --ignore "\.sw[a-z]"
     \ -g ""'
 " Use the faster ctrlp-py-matcher to speed up matching
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
