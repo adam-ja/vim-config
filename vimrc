@@ -173,6 +173,8 @@ map <C-l> <C-w>l
 nmap <Leader>t <C-p>
 " Open CtrlP in find buffer mode with \b
 nmap <Leader>b :CtrlPBuffer<CR>
+" Split arguments in a function call/definition onto separate lines
+nnoremap <silent> <Leader>sp ^f(li<CR><Esc>:s/,/,\r/g<CR>f)i<CR><Esc>vib=/)<CR>==:nohlsearch<CR>
 
 
 " UI / styling
