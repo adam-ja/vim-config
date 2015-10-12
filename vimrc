@@ -50,6 +50,7 @@ Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-commentary'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'embear/vim-localvimrc'
 
 
 " Git integration
@@ -242,6 +243,11 @@ set hidden
 
 " Write swapfile 2 seconds after typing ends (for faster realtime gitgutter)
 set updatetime=2000
+
+" Make the decisions given when asked before sourcing local vimrc files
+" persistent over multiple vim runs and instances (only if the answer was given
+" in upper case (Y/N/A))
+let g:localvimrc_persistent=1
 
 
 " Functions
