@@ -176,6 +176,11 @@ nmap <Leader>t <C-p>
 nmap <Leader>b :CtrlPBuffer<CR>
 " Split arguments in a function call/definition onto separate lines
 nnoremap <silent> <Leader>sp ^f(li<CR><Esc>:s/,/,\r/g<CR>f)i<CR><Esc>vib=/)<CR>==:nohlsearch<CR>
+" Map CamelCaseMotion to ',w', ',b', ',e', and ',ge'
+map ,w <Plug>CamelCaseMotion_w
+map ,b <Plug>CamelCaseMotion_b
+map ,e <Plug>CamelCaseMotion_e
+map ,ge <Plug>CamelCaseMotion_ge
 
 
 " UI / styling
