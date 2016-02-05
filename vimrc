@@ -19,7 +19,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Files & Buffers
 "-----------------
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'd11wtq/ctrlp_bdelete.vim'
 Plugin 'bogado/file-line'
