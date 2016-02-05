@@ -23,6 +23,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'd11wtq/ctrlp_bdelete.vim'
 Plugin 'jasoncodes/ctrlp-modified.vim'
+Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'bogado/file-line'
 Plugin 'rking/ag.vim'
 Plugin 'PhilGrayson/php-explorer'
@@ -180,6 +181,10 @@ nmap <Leader>b :CtrlPBuffer<CR>
 nmap <Leader>m :CtrlPModified<CR>
 " Open CtrlP showing files modified on the current branch
 nmap <Leader>M :CtrlPBranch<CR>
+" Open CtrlP for functions in the current file
+nmap <Leader>f :CtrlPFunky<CR>
+" Open CtrlP for functions filtering by the word under the cursor
+nmap <Leader>F :execute 'CtrlPFunky ' . expand('<cword>')<CR>
 " Split arguments in a function call/definition onto separate lines
 nnoremap <silent> <Leader>sp ^f(li<CR><Esc>:s/,/,\r/g<CR>f)i<CR><Esc>vib=/)<CR>==:nohlsearch<CR>
 " Map CamelCaseMotion to ',w', ',b', ',e', and ',ge'
