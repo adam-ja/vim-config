@@ -219,6 +219,8 @@ set ruler
 set laststatus=2
 " Keep the cursor vertically centered, where possible
 set scrolloff=999
+" Highlight the line the cursor is currently on
+set cursorline
 " Draw a vertical line at 120 characters
 highlight ColorColumn ctermbg=DarkGrey
 set colorcolumn=120
