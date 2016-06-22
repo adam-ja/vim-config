@@ -27,6 +27,7 @@ Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'bogado/file-line'
 Plugin 'rking/ag.vim'
 Plugin 'PhilGrayson/php-explorer'
+Plugin 'scrooloose/nerdtree'
 
 " Syntax
 "--------
@@ -188,6 +189,8 @@ nmap <Leader>M :CtrlPBranch<CR>
 nmap <Leader>f :CtrlPFunky<CR>
 " Open CtrlP for functions filtering by the word under the cursor
 nmap <Leader>F :execute 'CtrlPFunky ' . expand('<cword>')<CR>
+" Toggle NERDTree
+nmap <Leader>n :NERDTreeToggle<CR>
 " Split arguments in a function call/definition onto separate lines
 nnoremap <silent> <Leader>sp ^f(li<CR><Esc>:s/,/,\r/g<CR>f)i<CR><Esc>vib=/)<CR>==:nohlsearch<CR>
 " Map CamelCaseMotion to ',w', ',b', ',e', and ',ge'

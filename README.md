@@ -31,6 +31,7 @@ Below is a list of all the plugins included in this repo's `vimrc` file, with a 
 - [file-line](https://github.com/bogado/file-line) allows you to open files in vim on a specific line with `vim path/to/file:lineNo`
 - [ag.vim](https://github.com/rking/ag.vim) integrates [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) into vim.
 - [PHP Explorer](https://github.com/PhilGrayson/php-explorer) lets you jump to a PHP class or function declaration from use statements, parameter typehints, and method calls under the cursor with `<Leader>gt` (mapped to `<F4>` in this repo's `vimrc`).
+- [NERDTree](https://github.com/scrooloose/nerdtree) allows you to explore your filesystem as a tree from within vim, and to open files and directories.
 
 #### Syntax
 
