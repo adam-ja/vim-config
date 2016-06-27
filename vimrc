@@ -191,6 +191,8 @@ nmap <Leader>f :CtrlPFunky<CR>
 nmap <Leader>F :execute 'CtrlPFunky ' . expand('<cword>')<CR>
 " Toggle NERDTree
 nmap <Leader>n :NERDTreeToggle<CR>
+" Jump to the current file in NERDTree
+nmap <Leader>N :NERDTreeFind<CR>
 " Split arguments in a function call/definition onto separate lines
 nnoremap <silent> <Leader>sp ^f(li<CR><Esc>:s/,/,\r/g<CR>f)i<CR><Esc>vib=/)<CR>==:nohlsearch<CR>
 " Map CamelCaseMotion to ',w', ',b', ',e', and ',ge'
