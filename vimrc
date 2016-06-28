@@ -21,7 +21,6 @@ Plugin 'gmarik/Vundle.vim'
 "-----------------
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
-Plugin 'd11wtq/ctrlp_bdelete.vim'
 Plugin 'jasoncodes/ctrlp-modified.vim'
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'bogado/file-line'
@@ -151,10 +150,6 @@ let g:ctrlp_open_new_file='r'
 let g:ctrlp_open_multiple_files='i'
 " Only update match window after typing has stopped for 100ms
 let g:ctrlp_lazy_update=100
-" Initialise the CtrlP delete plugin
-if (!empty(glob("~/.vim/bundle/ctrlp_bdelete.vim")))
-    call ctrlp_bdelete#init()
-endif
 
 " Key mapping
 "-------------

@@ -25,7 +25,6 @@ Below is a list of all the plugins included in this repo's `vimrc` file, with a 
 
 - [CtrlP](https://github.com/ctrlpvim/ctrlp.vim) is a powerful fuzzy finder for finding and opening files and buffers in a project.
 - [ctrlp-py-matcher](https://github.com/FelikZ/ctrlp-py-matcher) is a faster CtrlP matcher implemented in Python
-- [ctrlp_bdelete.vim](https://github.com/d11wtq/ctrlp_bdelete.vim) is an extension to CtrlP that makes it possible to close open buffers in CtrlP's buffer mode.
 - [ctrlp-modified.vim](https://github.com/jasoncodes/ctrlp-modified.vim) is an extension to CtrlP that shows files edited in the current Git branch/since the last commit.
 - [ctrlp-funky](https://github.com/tacahiroy/ctrlp-funky) is a CtrlP extension that acts like a simple function navigator.
 - [file-line](https://github.com/bogado/file-line) allows you to open files in vim on a specific line with `vim path/to/file:lineNo`
