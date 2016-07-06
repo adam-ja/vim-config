@@ -24,9 +24,6 @@ Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'jasoncodes/ctrlp-modified.vim'
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'bogado/file-line'
-Plugin 'rking/ag.vim'
-Plugin 'PhilGrayson/php-explorer'
-Plugin 'scrooloose/nerdtree'
 
 " Syntax
 "--------
@@ -54,7 +51,6 @@ Plugin 'tpope/vim-commentary'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'embear/vim-localvimrc'
 
-
 " Git integration
 "-----------------
 Plugin 'tpope/vim-fugitive'
@@ -65,7 +61,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tomasr/molokai'
-Plugin 'Yggdroot/indentLine'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'edkolev/promptline.vim'
 
@@ -184,10 +179,6 @@ nmap <Leader>M :CtrlPBranch<CR>
 nmap <Leader>f :CtrlPFunky<CR>
 " Open CtrlP for functions filtering by the word under the cursor
 nmap <Leader>F :execute 'CtrlPFunky ' . expand('<cword>')<CR>
-" Toggle NERDTree
-nmap <Leader>n :NERDTreeToggle<CR>
-" Jump to the current file in NERDTree
-nmap <Leader>N :NERDTreeFind<CR>
 " Split arguments in a function call/definition onto separate lines
 nnoremap <silent> <Leader>sp ^f(li<CR><Esc>:s/,/,\r/g<CR>f)i<CR><Esc>vib=/)<CR>==:nohlsearch<CR>
 " Map CamelCaseMotion to ',w', ',b', ',e', and ',ge'
@@ -229,11 +220,6 @@ highlight ColorColumn ctermbg=DarkGrey
 set colorcolumn=120
 " CtrlP match window settings (order top-to-bottom, max height 999 lines)
 let g:ctrlp_match_window='order:ttb,max:999'
-" Highlight each leading space in indentation
-let g:indentLine_leadingSpaceChar='·'
-let g:indentLine_leadingSpaceEnabled=1
-" Set the indentation highlight colour (subtle grey against molokai background)
-let g:indentLine_color_term=237
 
 " Promptline config
 let g:promptline_theme='airline'

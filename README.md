@@ -28,9 +28,6 @@ Below is a list of all the plugins included in this repo's `vimrc` file, with a 
 - [ctrlp-modified.vim](https://github.com/jasoncodes/ctrlp-modified.vim) is an extension to CtrlP that shows files edited in the current Git branch/since the last commit.
 - [ctrlp-funky](https://github.com/tacahiroy/ctrlp-funky) is a CtrlP extension that acts like a simple function navigator.
 - [file-line](https://github.com/bogado/file-line) allows you to open files in vim on a specific line with `vim path/to/file:lineNo`
-- [ag.vim](https://github.com/rking/ag.vim) integrates [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) into vim.
-- [PHP Explorer](https://github.com/PhilGrayson/php-explorer) lets you jump to a PHP class or function declaration from use statements, parameter typehints, and method calls under the cursor with `<Leader>gt` (mapped to `<F4>` in this repo's `vimrc`).
-- [NERDTree](https://github.com/scrooloose/nerdtree) allows you to explore your filesystem as a tree from within vim, and to open files and directories.
 
 #### Syntax
 
@@ -66,6 +63,5 @@ Below is a list of all the plugins included in this repo's `vimrc` file, with a 
 - [vim-airline](https://github.com/vim-airline/vim-airline/) provides a nice, customisable status line. It also integrates with `vim-gitgutter` to show the current branch name and a count of modified, added, and removed lines.
 - [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes) is the official theme repo for vim-airline.
 - [molokai](https://github.com/tomasr/molokai) is (in my opinion) a nice colour scheme, and there's a matching `vim-airline` theme.
-- [indentLine](https://github.com/Yggdroot/indentLine) highlights indentation for code indented with spaces.
 - [tmuxline.vim](https://github.com/edkolev/tmuxline.vim) generates tmux statusline config to match `vim-airline`.
 - [promptline.vim](https://github.com/edkolev/promptline.vim) generates shell prompt config to match `vim-airline`.
