@@ -186,6 +186,9 @@ map ,w <Plug>CamelCaseMotion_w
 map ,b <Plug>CamelCaseMotion_b
 map ,e <Plug>CamelCaseMotion_e
 map ,ge <Plug>CamelCaseMotion_ge
+" Sort the paragraph around the current cursor position (above and below to the
+" nearest blank line) in alphabetical order
+nnoremap <Leader>al <C-v>apb:sort<CR>
 
 
 " UI / styling
