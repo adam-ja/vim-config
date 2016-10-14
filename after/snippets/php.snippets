@@ -57,3 +57,22 @@ snippet getset
 	{
 		return $this->$3;
 	}
+snippet sethasget
+	${1:public} function set${2:ParamName}(${3:type} $${4:paramName})
+	{
+		$this->$4 = $$4;
+	}
+
+	public function has$2(): bool
+	{
+		return null !== $this->$4;
+	}
+
+	public function get$2(): $3
+	{
+		if (!$this->has$2()) {
+			throw new \RuntimeException('$4 is not set');
+		}
+
+		return $this->$4;
+	}
