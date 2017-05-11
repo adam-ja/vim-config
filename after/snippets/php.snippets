@@ -30,7 +30,9 @@ snippet unittest
 	<?php
 	namespace ${1:namespace};
 
-	class ${2:`vim_snippets#Filename()`} extends \PHPUnit_Framework_TestCase
+	use PHPUnit\Framework\TestCase;
+
+	class ${2:`vim_snippets#Filename()`} extends TestCase
 	{
 		protected function setUp()
 		{
@@ -75,4 +77,11 @@ snippet sethasget
 		}
 
 		return $this->$4;
+	}
+snippet provider
+	public function provide${1:ProvidedThing}(): array
+	{
+		return [
+			[${2:FirstDataSet}],
+		];
 	}
