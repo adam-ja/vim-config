@@ -126,6 +126,10 @@ autocmd BufRead,BufNewFile *.twig set filetype=htmljinja
 set showmatch
 " Extended % matching (if/else, XML tags, etc as well as standard brackets)
 runtime macros/matchit.vim
+" Syntax highlight SQL within PHP
+let php_sql_query=1
+" Syntax highlight HTML within PHP
+let php_htmlInStrings=1
 
 
 " CtrlP
