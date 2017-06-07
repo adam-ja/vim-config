@@ -130,6 +130,18 @@ runtime macros/matchit.vim
 let php_sql_query=1
 " Syntax highlight HTML within PHP
 let php_htmlInStrings=1
+" Configure syntax checkers for syntastic to use for PHP files
+let g:syntastic_php_checkers=['php','phpcs','phpmd','phpstan']
+" Automatically open and close the error window depending on whether syntastic
+" detects errors
+let g:syntastic_auto_loc_list=1
+" Set syntastic error window height in lines (defaults to 10)
+let g:syntastic_loc_list_height=5
+" Run syntax checks when files are first opened as well as when they're saved
+let g:syntastic_check_on_open=1
+" Run all checkers that apply to a file and aggregate and display all errors,
+" rather than stopping the first time a checker finds any errors
+let g:syntastic_aggregate_errors=1
 
 
 " CtrlP
