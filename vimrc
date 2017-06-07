@@ -142,6 +142,11 @@ let g:syntastic_check_on_open=1
 " Run all checkers that apply to a file and aggregate and display all errors,
 " rather than stopping the first time a checker finds any errors
 let g:syntastic_aggregate_errors=1
+" Find and use a config file for phpstan
+autocmd FileType php let b:syntastic_php_phpstan_args =
+    \ get(g:, 'syntastic_php_phpstan_args', '') .
+    \ '-l 5' .
+    \ FindConfig('-c', 'phpstan.neon', expand('<afile>:p:h', 1))
 
 
 " CtrlP
@@ -290,4 +295,11 @@ function! Preserve(command)
     " Clean up: restore previous search history, and cursor position
     let @/=_s
     call cursor(l, c)
+endfunction
+
+" Search for a config file starting from the current directory and working up
+" https://github.com/vim-syntastic/syntastic#faqconfig
+function! FindConfig(prefix, what, where)
+    let cfg = findfile(a:what, escape(a:where, ' ') . ';')
+    return cfg !=# '' ? ' ' . a:prefix . ' ' . shellescape(cfg) : ''
 endfunction
