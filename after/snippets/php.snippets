@@ -21,9 +21,9 @@ snippet zffactory
 
 	class ${2:`vim_snippets#Filename()`} implements FactoryInterface
 	{
-		public function createService(ServiceLocatorInterface $serviceLocator)
+		public function createService(ServiceLocatorInterface $serviceLocator): ${3:ReturnType}
 		{
-			${3}
+			return new $3(${4});
 		}
 	}
 snippet unittest
@@ -40,24 +40,24 @@ snippet unittest
 		}
 	}
 snippet setter
-	${1:public} function set${2:ParamName}($${3:paramName})
+	${1:public} function set${2:ParamName}(${3:paramType} $${4:paramName})
 	{
-		$this->$3 = $$3;
+		$this->$4 = $$4;
 	}
 snippet getter
-	public function get${1:ParamName}()
+	public function get${1:ParamName}(): ${2:ReturnType}
 	{
-		return $this->${2:paramName};
+		return $this->${3:paramName};
 	}
 snippet getset
-	${1:public} function set${2:ParamName}($${3:paramName})
+	${1:public} function set${2:ParamName}(${3:paramType} $${4:paramName})
 	{
-		$this->$3 = $$3;
+		$this->$4 = $$4;
 	}
 
-	public function get$2()
+	public function get$2(): $3
 	{
-		return $this->$3;
+		return $this->$4;
 	}
 snippet sethasget
 	${1:public} function set${2:ParamName}(${3:type} $${4:paramName})
