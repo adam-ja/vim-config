@@ -34,7 +34,6 @@ Plugin 'rodjek/vim-puppet'
 
 " Utilities
 "-----------
-Plugin 'mattn/emmet-vim'
 Plugin 'vim-scripts/SearchComplete'
 Plugin 'MarcWeber/vim-addon-mw-utils' " Required for vim-snipmate
 Plugin 'tomtom/tlib_vim' " Required for vim-snipmate
@@ -63,6 +62,15 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tomasr/molokai'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'edkolev/promptline.vim'
+
+" Language specifics
+"--------------------
+" HTML
+" -----
+Plugin 'mattn/emmet-vim'
+" PHP
+" ----
+Plugin 'beanworks/vim-phpfmt'
 
 " End vundle
 call vundle#end()
