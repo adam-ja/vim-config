@@ -189,8 +189,6 @@ noremap <Right> <NOP>
 map <F2> :Tabularize /
 " Toggle paste mode on/off with F3
 set pastetoggle=<F3>
-" Map PHP Explorer GoTo to F4
-map <F4> \gt
 " Easy window switching
 map <C-h> <C-w>h
 map <C-j> <C-w>j
