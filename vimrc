@@ -62,6 +62,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tomasr/molokai'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'edkolev/promptline.vim'
+Plugin 'ap/vim-css-color'
 
 " Language specifics
 "--------------------
