@@ -63,6 +63,7 @@ Plugin 'tomasr/molokai'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'edkolev/promptline.vim'
 Plugin 'ap/vim-css-color'
+Plugin 'RRethy/vim-illuminate'
 
 " Language specifics
 "--------------------

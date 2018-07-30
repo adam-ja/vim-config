@@ -65,3 +65,5 @@ Below is a list of all the plugins included in this repo's `vimrc` file, with a 
 - [molokai](https://github.com/tomasr/molokai) is (in my opinion) a nice colour scheme, and there's a matching `vim-airline` theme.
 - [tmuxline.vim](https://github.com/edkolev/tmuxline.vim) generates tmux statusline config to match `vim-airline`.
 - [promptline.vim](https://github.com/edkolev/promptline.vim) generates shell prompt config to match `vim-airline`.
+- [vim-css-color](https://github.com/ap/vim-css-color) highlights CSS colours (identified by name, hex code, or RGB) with the corresponding colour.
+- [vim-illuminate](https://github.com/RRethy/vim-illuminate) automatically highlights all other instances of the word currently under the cursor.
