@@ -18,17 +18,10 @@ else
 fi
 $powerline_dir/install.sh
 
-# Make directories for vim plugins and persistent undo
-mkdir -p ${HOME}/.vim/bundle ${HOME}/vim-undo
+# Make directory for vim persistent undo
+mkdir -p ${HOME}/vim-undo
 
-vundle_path=$dir/bundle/Vundle.vim
-# Clone Vundle to manage plugins
-if [ ! -e $vundle_path ]
-then
-    git clone https://github.com/gmarik/Vundle.vim.git $vundle_path
-fi
-
-# Install/Update all plugins specified with Vundle in vimrc, and remove any not specified
-vim +PluginClean! +PluginInstall! +qall
+# Install/Update all plugins specified with vim-plug in vimrc, and remove any not specified
+vim +PlugClean! +PlugInstall! +qall
 
 printf "\nIMPORTANT: You must now change the font in your terminal profile to a powerline font for the nice symbols in vim-airline to work.\n\n"

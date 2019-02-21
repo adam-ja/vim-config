@@ -6,4 +6,5 @@ Session.vim
 .netrwhist
 *~
 
-bundle/*
+autoload/*
+plugged/*

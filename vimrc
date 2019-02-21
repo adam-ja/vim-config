@@ -2,80 +2,75 @@
 set nocompatible
 
 """"""""""""
-"  VUNDLE  "
+"  VIM-PLUG  "
 """"""""""""
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" Temporarily disable filetype detection - required for vundle
-filetype off
-
-" Include vundle in the runtime path
-set rtp+=~/.vim/bundle/Vundle.vim
-
-" Initialise vundle to install plugins to ~/.vim/bundle
-call vundle#begin('~/.vim/bundle')
-
-" Let vundle manage itself (required)
-Plugin 'gmarik/Vundle.vim'
+" Initialise vim-plug to install plugins to ~/.vim/plugged
+call plug#begin('~/.vim/plugged')
 
 " Files & Buffers
 "-----------------
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'FelikZ/ctrlp-py-matcher'
-Plugin 'jasoncodes/ctrlp-modified.vim'
-Plugin 'tacahiroy/ctrlp-funky'
-Plugin 'bogado/file-line'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'jasoncodes/ctrlp-modified.vim'
+Plug 'tacahiroy/ctrlp-funky'
+Plug 'bogado/file-line'
 
 " Syntax
 "--------
-Plugin 'scrooloose/syntastic'
-Plugin 'mitsuhiko/vim-jinja'
-Plugin 'groenewege/vim-less'
-Plugin 'rodjek/vim-puppet'
+Plug 'scrooloose/syntastic'
+Plug 'mitsuhiko/vim-jinja'
+Plug 'groenewege/vim-less'
+Plug 'rodjek/vim-puppet'
 
 " Utilities
 "-----------
-Plugin 'vim-scripts/SearchComplete'
-Plugin 'MarcWeber/vim-addon-mw-utils' " Required for vim-snipmate
-Plugin 'tomtom/tlib_vim' " Required for vim-snipmate
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
-Plugin 'bkad/CamelCaseMotion'
-Plugin 'godlygeek/tabular'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-speeddating'
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-commentary'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'embear/vim-localvimrc'
+Plug 'vim-scripts/SearchComplete'
+Plug 'MarcWeber/vim-addon-mw-utils' " Required for vim-snipmate
+Plug 'tomtom/tlib_vim' " Required for vim-snipmate
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'bkad/CamelCaseMotion'
+Plug 'godlygeek/tabular'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-commentary'
+Plug 'jiangmiao/auto-pairs'
+Plug 'embear/vim-localvimrc'
 
 " Git integration
 "-----------------
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " UI / styling
 "--------------
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tomasr/molokai'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'edkolev/promptline.vim'
-Plugin 'ap/vim-css-color'
-Plugin 'RRethy/vim-illuminate'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tomasr/molokai'
+Plug 'edkolev/tmuxline.vim'
+Plug 'edkolev/promptline.vim'
+Plug 'ap/vim-css-color'
+Plug 'RRethy/vim-illuminate'
 
 " Language specifics
 "--------------------
 " HTML
 " -----
-Plugin 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim'
 " PHP
 " ----
-Plugin 'beanworks/vim-phpfmt'
+Plug 'beanworks/vim-phpfmt'
 
-" End vundle
-call vundle#end()
+" End vim-plug
+call plug#end()
 
 
 
@@ -226,7 +221,7 @@ nnoremap <Leader>al <C-v>apb:sort<CR>
 " Use 256 colours for colorschemes
 set t_Co=256
 " Use molokai colorscheme
-if (!empty(glob("~/.vim/bundle/molokai")))
+if (!empty(glob("~/.vim/plugged/molokai")))
     let g:molokai_original=1
     let g:rehash256=1
     colorscheme molokai
