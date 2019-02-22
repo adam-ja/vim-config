@@ -6,7 +6,7 @@ My vim settings and plugins
 
 The included `install.sh` script will install/update any packages you need (assuming you're on a Debian-based system), create any required directories, and install/update the vim plugins specified in the `vimrc` file.
 
-**IMPORTANT**: The `install.sh` script will remove any vim plugins you already have installed if they are not specified to be managed by `Vundle` in the `vimrc` file
+**IMPORTANT**: The `install.sh` script will remove any vim plugins you already have installed if they are not specified to be managed by `vim-plug` in the `vimrc` file
 ```sh
 git clone https://github.com/adam-ja/vim-config.git ~/.vim
 ~/.vim/install.sh
@@ -17,7 +17,7 @@ Pretty much everything in the `vimrc` file is commented with at least a brief ex
 
 ## Plugins
 
-All vim plugins are managed by [Vundle](https://github.com/gmarik/Vundle.vim), including Vundle itself. Plugins are specified in the `vimrc` file. When inside vim, `:PluginInstall` will install any specified plugins that are missing, `:PluginInstall` will install new plugins and update existing ones, and `:PluginUpdate` will just update those that are already installed. For more information, go [here](https://github.com/gmarik/Vundle.vim) or see the vimdoc (`:help vundle`).
+All vim plugins are managed by [vim-plug](https://github.com/junegunn/vim-plug). Plugins are specified in the `vimrc` file. When inside vim, `:PlugInstall` will install any specified plugins that are missing, `:PlugInstall` will install new plugins and update existing ones, and `:PlugUpdate` will just update those that are already installed. For more information, go [here](https://github.com/junegunn/vim-plug).
 
 Below is a list of all the plugins included in this repo's `vimrc` file, with a brief description. To find out more, click through to the plugin's gitub page or, once you've installed the plugin, try `:help plugin-name`.
 
@@ -64,6 +64,5 @@ Below is a list of all the plugins included in this repo's `vimrc` file, with a 
 - [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes) is the official theme repo for vim-airline.
 - [molokai](https://github.com/tomasr/molokai) is (in my opinion) a nice colour scheme, and there's a matching `vim-airline` theme.
 - [tmuxline.vim](https://github.com/edkolev/tmuxline.vim) generates tmux statusline config to match `vim-airline`.
-- [promptline.vim](https://github.com/edkolev/promptline.vim) generates shell prompt config to match `vim-airline`.
 - [vim-css-color](https://github.com/ap/vim-css-color) highlights CSS colours (identified by name, hex code, or RGB) with the corresponding colour.
 - [vim-illuminate](https://github.com/RRethy/vim-illuminate) automatically highlights all other instances of the word currently under the cursor.

@@ -56,7 +56,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tomasr/molokai'
 Plug 'edkolev/tmuxline.vim'
-Plug 'edkolev/promptline.vim'
 Plug 'ap/vim-css-color'
 Plug 'RRethy/vim-illuminate'
 
@@ -247,16 +246,6 @@ highlight ColorColumn ctermbg=DarkGrey
 set colorcolumn=120
 " CtrlP match window settings (order top-to-bottom, max height 999 lines)
 let g:ctrlp_match_window='order:ttb,max:999'
-
-" Promptline config
-let g:promptline_theme='airline'
-let g:promptline_preset={
-    \'a': [ '%*' ],
-    \'b': [ promptline#slices#host({'only_if_ssh':1}), promptline#slices#user() ],
-    \'c': [ promptline#slices#cwd() ],
-    \'x': [ promptline#slices#vcs_branch() ],
-    \'y': [ promptline#slices#git_status() ]
-\}
 
 
 " Other
