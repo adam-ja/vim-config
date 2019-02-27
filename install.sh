@@ -6,7 +6,7 @@ set -e
 dir=$(dirname $(readlink -f "$BASH_SOURCE"))
 
 # Install dependencies
-sudo apt-get install silversearcher-ag vim-gnome
+sudo apt install --assume-yes silversearcher-ag vim-gnome
 
 # Install Powerline fonts for nice VCS symbols in vim-airline
 powerline_dir=${HOME}/powerline-fonts
