@@ -190,8 +190,6 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-" Command-T muscle memory for CtrlP
-nmap <Leader>t <C-p>
 " Open CtrlP in find buffer mode with \b
 nmap <Leader>b :CtrlPBuffer<CR>
 " Open CtrlP showing files modified since the last commit
