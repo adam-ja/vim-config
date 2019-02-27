@@ -51,6 +51,7 @@ Below is a list of all the plugins included in this repo's `vimrc` file, with a 
 - [vim-abolish](https://github.com/tpope/vim-abolish) lets you easily substitute or configure abbreviations for all case variants and more. It also provides shortcuts for switching text between camelCase, MixedCase, etc.
 - [vim-commentary](https://github.com/tpope/vim-commentary) provides shortcuts to comment and uncomment lines and blocks of text.
 - [auto-pairs](https://github.com/jiangmiao/auto-pairs) inserts and deletes brackets and quotes in pairs.
+- [vim-closetag](https://github.com/alvan/vim-closetag) automatically inserts closing HTML tags where appropriate.
 - [localvimrc](https://github.com/embear/vim-localvimrc) searches for and sources local vimrc files (`.lvimrc`) from the directory of the current file up to the root directory, to allow for project-level overrides.
 
 #### Git integration
