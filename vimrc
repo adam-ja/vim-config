@@ -45,6 +45,7 @@ Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'embear/vim-localvimrc'
+Plug 'ludovicchabant/vim-gutentags'
 
 " Git integration
 "-----------------
