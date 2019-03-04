@@ -159,7 +159,7 @@ autocmd FileType php let b:syntastic_php_phpstan_args =
 "-------
 
 " Use ag for faster indexing
-let g:ctrlp_user_command = 'ag %s --ignore-case --hidden --nocolor --nogroup -g ""'
+let g:ctrlp_user_command = 'ag %s --ignore-case --hidden --skip-vcs-ignore --nocolor --nogroup -g ""'
 " Use the faster ctrlp-py-matcher to speed up matching
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 " Open new files created by CtrlP in the current window
