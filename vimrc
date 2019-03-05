@@ -45,7 +45,7 @@ Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'embear/vim-localvimrc'
-Plug 'ludovicchabant/vim-gutentags'
+Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 
 " Git integration
 "-----------------
@@ -209,6 +209,18 @@ map ,ge <Plug>CamelCaseMotion_ge
 " nearest blank line) in alphabetical order
 nnoremap <Leader>al <C-v>apb:sort<CR>
 
+" Phpactor mappings
+" Include use statement
+nmap <Leader>u :call phpactor#UseAdd()<CR>
+" Invoke the context menu
+nmap <Leader>mm :call phpactor#ContextMenu()<CR>
+" Invoke the navigation menu
+nmap <Leader>nn :call phpactor#Navigate()<CR>
+" Goto definition of class or class member under the cursor
+nmap <C-]> :call phpactor#GotoDefinition()<CR>
+" Show brief information about the symbol under the cursor
+nmap <Leader>K :call phpactor#Hover()<CR>
+
 
 " UI / styling
 "--------------
@@ -267,6 +279,9 @@ set updatetime=2000
 " persistent over multiple vim runs and instances (only if the answer was given
 " in upper case (Y/N/A))
 let g:localvimrc_persistent=1
+
+" Use phpactor for PHP omni-completion
+autocmd FileType php setlocal omnifunc=phpactor#Complete
 
 
 " Functions
