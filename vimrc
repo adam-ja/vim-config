@@ -27,6 +27,7 @@ Plug 'mitsuhiko/vim-jinja'
 Plug 'groenewege/vim-less'
 Plug 'rodjek/vim-puppet'
 Plug 'StanAngeloff/php.vim'
+Plug 'jwalton512/vim-blade'
 
 " Utilities
 "-----------
