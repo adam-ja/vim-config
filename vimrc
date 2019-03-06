@@ -26,6 +26,7 @@ Plug 'scrooloose/syntastic'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'groenewege/vim-less'
 Plug 'rodjek/vim-puppet'
+Plug 'StanAngeloff/php.vim'
 
 " Utilities
 "-----------
@@ -132,10 +133,6 @@ autocmd BufRead,BufNewFile *.twig set filetype=htmljinja
 set showmatch
 " Extended % matching (if/else, XML tags, etc as well as standard brackets)
 runtime macros/matchit.vim
-" Syntax highlight SQL within PHP
-let php_sql_query=1
-" Syntax highlight HTML within PHP
-let php_htmlInStrings=1
 " Configure syntax checkers for syntastic to use for PHP files
 let g:syntastic_php_checkers=['php','phpcs','phpmd','phpstan']
 " Automatically open and close the error window depending on whether syntastic
