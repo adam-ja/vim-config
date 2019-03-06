@@ -22,7 +22,7 @@ Plug 'bogado/file-line'
 
 " Syntax
 "--------
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'groenewege/vim-less'
 Plug 'rodjek/vim-puppet'
@@ -134,24 +134,14 @@ autocmd BufRead,BufNewFile *.twig set filetype=htmljinja
 set showmatch
 " Extended % matching (if/else, XML tags, etc as well as standard brackets)
 runtime macros/matchit.vim
-" Configure syntax checkers for syntastic to use for PHP files
-let g:syntastic_php_checkers=['php','phpcs','phpmd','phpstan']
-" Automatically open and close the error window depending on whether syntastic
-" detects errors
-let g:syntastic_auto_loc_list=1
-" Set syntastic error window height in lines (defaults to 10)
-let g:syntastic_loc_list_height=5
-" Run syntax checks when files are first opened as well as when they're saved
-let g:syntastic_check_on_open=1
-" Run all checkers that apply to a file and aggregate and display all errors,
-" rather than stopping the first time a checker finds any errors
-let g:syntastic_aggregate_errors=1
-" Find and use a config file for phpstan
-autocmd FileType php let b:syntastic_php_phpstan_args =
-    \ get(g:, 'syntastic_php_phpstan_args', '') .
-    \ '-l 5' .
-    \ FindConfig('-c', 'phpstan.neon', expand('<afile>:p:h', 1))
-
+" Open error window when ale detects errors
+let g:ale_open_list = 1
+" Show 5 errors at a time in the error window (default is 10)
+let g:ale_list_window_size = 5
+" Set phpcs standard for ale to use
+let g:ale_php_phpcs_standard = 'psr2'
+" Set phpstan to level 5 for ale
+let g:ale_php_phpstan_level = 5
 
 " CtrlP
 "-------
@@ -206,6 +196,10 @@ map ,ge <Plug>CamelCaseMotion_ge
 " Sort the paragraph around the current cursor position (above and below to the
 " nearest blank line) in alphabetical order
 nnoremap <Leader>al <C-v>apb:sort<CR>
+" Move to the previous ale warning/error
+nmap <silent> <Leader>j <Plug>(ale_previous_wrap)
+" Move to the next ale warning/error
+nmap <silent> <Leader>k <Plug>(ale_next_wrap)
 
 " Phpactor mappings
 " Include use statement
@@ -296,11 +290,4 @@ function! Preserve(command)
     " Clean up: restore previous search history, and cursor position
     let @/=_s
     call cursor(l, c)
-endfunction
-
-" Search for a config file starting from the current directory and working up
-" https://github.com/vim-syntastic/syntastic#faqconfig
-function! FindConfig(prefix, what, where)
-    let cfg = findfile(a:what, escape(a:where, ' ') . ';')
-    return cfg !=# '' ? ' ' . a:prefix . ' ' . shellescape(cfg) : ''
 endfunction
