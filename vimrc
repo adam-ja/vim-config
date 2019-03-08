@@ -28,6 +28,7 @@ Plug 'groenewege/vim-less'
 Plug 'rodjek/vim-puppet'
 Plug 'StanAngeloff/php.vim'
 Plug 'jwalton512/vim-blade'
+Plug 'posva/vim-vue'
 
 " Utilities
 "-----------
@@ -130,6 +131,9 @@ highlight SpecialKey ctermfg=darkgreen
 autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
 " Use htmljinja plugin to syntax highlight both HTML and twig in .twig files
 autocmd BufRead,BufNewFile *.twig set filetype=htmljinja
+" Stop vue syntax highlighting from breaking
+" (https://github.com/posva/vim-vue#my-syntax-highlighting-stops-working-randomly)
+autocmd FileType vue syntax sync fromstart
 " When a bracket is inserted, briefly jump to the matching one
 set showmatch
 " Extended % matching (if/else, XML tags, etc as well as standard brackets)
