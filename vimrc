@@ -277,6 +277,11 @@ set updatetime=2000
 " in upper case (Y/N/A))
 let g:localvimrc_persistent=1
 
+" Disable lvimrc sandbox so that lvimrc files can include potentially risky
+" commands. This is safe so long as you trust the source of any repos with a
+" lvimrc file.
+let g:localvimrc_sandbox = 0
+
 " Use phpactor for PHP omni-completion
 autocmd FileType php setlocal omnifunc=phpactor#Complete
 
