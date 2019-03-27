@@ -143,10 +143,17 @@ runtime macros/matchit.vim
 let g:ale_open_list = 1
 " Show 5 errors at a time in the error window (default is 10)
 let g:ale_list_window_size = 5
+" Wait a second for me to finish typing before linting
+let g:ale_lint_delay = 1000
 " Set phpcs standard for ale to use
 let g:ale_php_phpcs_standard = 'psr2'
 " Set phpstan to level 5 for ale
 let g:ale_php_phpstan_level = 5
+" Show ale info in statusline
+let g:airline#extensions#ale#enabled = 1
+" Show linter at beginning of message
+let g:ale_echo_msg_format = '[%linter%] %s'
+
 
 " CtrlP
 "-------
