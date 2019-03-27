@@ -49,6 +49,7 @@ Plug 'alvan/vim-closetag'
 Plug 'embear/vim-localvimrc'
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 Plug 'janko/vim-test'
+Plug 'kburdett/vim-nuuid'
 
 " Git integration
 "-----------------
@@ -204,6 +205,8 @@ nnoremap <Leader>al <C-v>apb:sort<CR>
 nmap <silent> <Leader>j <Plug>(ale_previous_wrap)
 " Move to the next ale warning/error
 nmap <silent> <Leader>k <Plug>(ale_next_wrap)
+" Disable default nuuid plugin mappings
+let g:nuuid_no_mappings = 1
 
 " Phpactor mappings
 " Include use statement
