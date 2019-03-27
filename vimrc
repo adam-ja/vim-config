@@ -18,8 +18,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'jasoncodes/ctrlp-modified.vim'
 Plug 'tacahiroy/ctrlp-funky'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Syntax
 "--------
@@ -285,14 +283,6 @@ let g:localvimrc_sandbox = 0
 " Use phpactor for PHP omni-completion
 autocmd FileType php setlocal omnifunc=phpactor#Complete
 
-" Automatically open NERDTree when starting vim
-autocmd vimenter * NERDTree | wincmd p
-
-" Sync NERDTree to newly opened file
-autocmd bufenter * call SyncNERDTree()
-
-" Close vim if the only window left open is a NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
 " Functions
@@ -309,14 +299,4 @@ function! Preserve(command)
     " Clean up: restore previous search history, and cursor position
     let @/=_s
     call cursor(l, c)
-endfunction
-
-" Call NERDTreeFind when opening a file iff current window contains a
-" modifiable, and we're not in vimdiff. File must also not be brand new
-" because NERDTree can only find files that exist in the filesystem.
-function! SyncNERDTree()
-    if &modifiable && strlen(expand('%')) > 0 && filereadable(expand('%')) && !&diff
-        silent! NERDTreeFind
-        wincmd p
-    endif
 endfunction
