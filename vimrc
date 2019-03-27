@@ -48,6 +48,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'embear/vim-localvimrc'
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
+Plug 'janko/vim-test'
 
 " Git integration
 "-----------------
@@ -216,6 +217,17 @@ nmap <C-]> :call phpactor#GotoDefinition()<CR>
 " Show brief information about the symbol under the cursor
 nmap <Leader>K :call phpactor#Hover()<CR>
 
+" vim-test mappings
+" Run all tests
+nmap <Leader>ta :TestSuite<CR>
+" Run all tests in current test file
+nmap <Leader>tf :TestFile<CR>
+" Run single test closest to the cursor
+nmap <Leader>tt :TestNearest<CR>
+" Re-run the last run test
+nmap <Leader>tl :TestLast<CR>
+" Go to the last run test
+nmap <Leader>tg :TestVisit<CR>
 
 " UI / styling
 "--------------
@@ -283,6 +295,9 @@ let g:localvimrc_sandbox = 0
 " Use phpactor for PHP omni-completion
 autocmd FileType php setlocal omnifunc=phpactor#Complete
 
+" Run tests with vim-test in a split window inside vim instead of in the
+" terminal
+let test#strategy = 'vimterminal'
 
 
 " Functions
