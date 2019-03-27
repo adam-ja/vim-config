@@ -169,6 +169,7 @@ let g:ctrlp_open_multiple_files='i'
 " Only update match window after typing has stopped for 100ms
 let g:ctrlp_lazy_update=100
 
+
 " Key mapping
 "-------------
 
@@ -275,6 +276,9 @@ let g:ctrlp_match_window='order:ttb,max:999'
 
 " Other
 "-------
+
+" Attempt to improve performance
+set lazyredraw
 
 " Set persistent undo (so undo history is saved even when buffers are closed)
 set undodir=~/.vim-undo
