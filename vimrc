@@ -50,6 +50,7 @@ Plug 'embear/vim-localvimrc'
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 Plug 'janko/vim-test'
 Plug 'kburdett/vim-nuuid'
+Plug 'wsdjeg/FlyGrep.vim'
 
 " Git integration
 "-----------------
@@ -215,6 +216,8 @@ nmap <silent> <Leader>j <Plug>(ale_previous_wrap)
 nmap <silent> <Leader>k <Plug>(ale_next_wrap)
 " Disable default nuuid plugin mappings
 let g:nuuid_no_mappings = 1
+" Open FlyGrep
+nmap <Leader>g :FlyGrep<CR>
 
 " Phpactor mappings
 " Include use statement
@@ -312,6 +315,9 @@ autocmd FileType php setlocal omnifunc=phpactor#Complete
 " Run tests with vim-test in a split window inside vim instead of in the
 " terminal
 let test#strategy = 'vimterminal'
+
+" FlyGrep errors the first time it runs in a vim instance if this isn't set
+let g:spacevim_debug_level = 1
 
 
 " Functions
