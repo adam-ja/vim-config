@@ -219,6 +219,12 @@ let g:nuuid_no_mappings = 1
 " Open FlyGrep
 nmap <Leader>g :FlyGrep<CR>
 
+" Write/quit even if I accidentally hold down shift on :w/:q/:wq
+command! -bang W :w<bang>
+command! -bang Q :q<bang>
+command! -bang WQ :wq<bang>
+command! -bang Wq :wq<bang>
+
 " Phpactor mappings
 " Include use statement
 nmap <Leader>u :call phpactor#UseAdd()<CR>
