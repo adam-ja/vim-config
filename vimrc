@@ -55,7 +55,7 @@ Plug 'wsdjeg/FlyGrep.vim'
 " Git integration
 "-----------------
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
 
 " UI / styling
 "--------------
@@ -287,17 +287,21 @@ set lazyredraw
 set undodir=~/.vim-undo
 set undofile
 
+" Hide (rather than close) abandoned buffers, to preserve undos and remember unsaved changes
+set hidden
+
 " Show possible completions in command mode with <TAB>
 set wildmenu
+
 " List all possible completions, completing to the longest common string
 " first, and then each full match on subsequent presses of <TAB>
 set wildmode=list:longest,full
 
-" Hide (rather than close) abandoned buffers, to preserve undos and remember unsaved changes
-set hidden
+" Write swapfile 500ms after typing ends (for faster realtime signify)
+set updatetime=500
 
-" Write swapfile 2 seconds after typing ends (for faster realtime gitgutter)
-set updatetime=2000
+" Update vim-signify signs in realtime (also causes the buffer to be autosaved)
+let g:signify_realtime = 1
 
 " Make the decisions given when asked before sourcing local vimrc files
 " persistent over multiple vim runs and instances (only if the answer was given
