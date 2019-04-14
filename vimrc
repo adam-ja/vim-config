@@ -180,6 +180,8 @@ let g:ctrlp_lazy_update=100
 " Key mapping
 "-------------
 
+map <Space> <Leader>
+
 " Hide search highlighting with \/
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
 " Disable arrow keys (except in insert mode) - use h,j,k,l
