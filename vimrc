@@ -235,15 +235,15 @@ command! -bang Wq :wq<bang>
 
 " Phpactor mappings
 " Include use statement
-nmap <Leader>u :call phpactor#UseAdd()<CR>
+autocmd FileType php nmap <buffer> <Leader>u :call phpactor#UseAdd()<CR>
 " Invoke the context menu
-nmap <Leader>mm :call phpactor#ContextMenu()<CR>
+autocmd FileType php nmap <buffer> <Leader>mm :call phpactor#ContextMenu()<CR>
 " Invoke the navigation menu
-nmap <Leader>nn :call phpactor#Navigate()<CR>
+autocmd FileType php nmap <buffer> <Leader>nn :call phpactor#Navigate()<CR>
 " Goto definition of class or class member under the cursor
-nmap <C-]> :call phpactor#GotoDefinition()<CR>
+autocmd FileType php nmap <buffer> <C-]> :call phpactor#GotoDefinition()<CR>
 " Show brief information about the symbol under the cursor
-nmap <Leader>K :call phpactor#Hover()<CR>
+autocmd FileType php nmap <buffer> <Leader>K :call phpactor#Hover()<CR>
 
 " vim-test mappings
 " Run all tests
