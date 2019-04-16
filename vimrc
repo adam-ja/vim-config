@@ -311,12 +311,6 @@ set wildmenu
 " first, and then each full match on subsequent presses of <TAB>
 set wildmode=list:longest,full
 
-" Write swapfile 500ms after typing ends (for faster realtime signify)
-set updatetime=500
-
-" Update vim-signify signs in realtime (also causes the buffer to be autosaved)
-let g:signify_realtime = 1
-
 " Make the decisions given when asked before sourcing local vimrc files
 " persistent over multiple vim runs and instances (only if the answer was given
 " in upper case (Y/N/A))
