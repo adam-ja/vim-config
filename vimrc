@@ -100,9 +100,8 @@ set expandtab
 set autoindent
 " Make backspace work properly (e.g. traverse line breaks)
 set backspace=indent,eol,start
-" Use 2 spaces instead of 4 for puppet and ruby
-autocmd Filetype puppet setlocal tabstop=2 shiftwidth=2 softtabstop=2
-autocmd Filetype ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
+" Use 2 spaces instead of 4 for certain filetypes
+autocmd Filetype puppet,ruby,yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 
 " Search
