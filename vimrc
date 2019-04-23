@@ -22,12 +22,7 @@ Plug 'tacahiroy/ctrlp-funky'
 " Syntax
 "--------
 Plug 'w0rp/ale'
-Plug 'mitsuhiko/vim-jinja'
-Plug 'groenewege/vim-less'
-Plug 'rodjek/vim-puppet'
-Plug 'StanAngeloff/php.vim'
-Plug 'jwalton512/vim-blade'
-Plug 'posva/vim-vue'
+Plug 'sheerun/vim-polyglot'
 
 " Utilities
 "-----------
@@ -47,7 +42,6 @@ Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'embear/vim-localvimrc'
-Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 Plug 'janko/vim-test'
 Plug 'kburdett/vim-nuuid'
 Plug 'wsdjeg/FlyGrep.vim'
@@ -74,6 +68,7 @@ Plug 'mattn/emmet-vim'
 " PHP
 " ----
 Plug 'beanworks/vim-phpfmt'
+Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 
 " End vim-plug
 call plug#end()
@@ -130,8 +125,6 @@ set listchars=tab:\|·,trail:`
 highlight SpecialKey ctermfg=darkgreen
 " Remove trailing spaces when saving a buffer
 autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
-" Use htmljinja plugin to syntax highlight both HTML and twig in .twig files
-autocmd BufRead,BufNewFile *.twig set filetype=htmljinja
 " Stop vue syntax highlighting from breaking
 " (https://github.com/posva/vim-vue#my-syntax-highlighting-stops-working-randomly)
 autocmd FileType vue syntax sync fromstart
