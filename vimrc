@@ -157,8 +157,8 @@ highlight ALEWarningSign ctermbg=none ctermfg=none
 " CtrlP
 "-------
 
-" Use ag for faster indexing
-let g:ctrlp_user_command = 'ag %s --ignore-case --hidden --skip-vcs-ignore --nocolor --nogroup -g ""'
+" Use ripgrep for faster indexing
+let g:ctrlp_user_command = 'rg %s --files --no-ignore-vcs --hidden --color=never --glob ""'
 " Use the faster ctrlp-py-matcher to speed up matching
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 " Open new files created by CtrlP in the current window
