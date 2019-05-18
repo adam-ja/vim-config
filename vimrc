@@ -44,7 +44,8 @@ Plug 'alvan/vim-closetag'
 Plug 'embear/vim-localvimrc'
 Plug 'janko/vim-test'
 Plug 'kburdett/vim-nuuid'
-Plug 'wsdjeg/FlyGrep.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
+Plug 'junegunn/fzf.vim'
 
 " Git integration
 "-----------------
@@ -172,9 +173,10 @@ let g:ctrlp_lazy_update=100
 " Key mapping
 "-------------
 
-map <Space> <Leader>
+" Make <Space> the <Leader> key instead of the default \
+let mapleader = ' '
 
-" Hide search highlighting with \/
+" Hide search highlighting
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
 " Disable arrow keys (except in insert mode) - use h,j,k,l
 noremap <Up> <NOP>
@@ -186,14 +188,10 @@ map <F2> :Tabularize /
 " Toggle paste mode on/off with F3
 set pastetoggle=<F3>
 " Easy window switching
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-" Open CtrlP in find buffer mode with \b
-nmap <Leader>b :CtrlPBuffer<CR>
-" Open CtrlP showing files modified since the last commit
-nmap <Leader>m :CtrlPModified<CR>
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
 " Open CtrlP showing files modified on the current branch
 nmap <Leader>M :CtrlPBranch<CR>
 " Open CtrlP for functions in the current file
@@ -216,8 +214,6 @@ nmap <silent> <Leader>j <Plug>(ale_previous_wrap)
 nmap <silent> <Leader>k <Plug>(ale_next_wrap)
 " Disable default nuuid plugin mappings
 let g:nuuid_no_mappings = 1
-" Open FlyGrep
-nmap <Leader>g :FlyGrep<CR>
 
 " Write/quit even if I accidentally hold down shift on :w/:q/:wq
 command! -bang W :w<bang>
@@ -319,9 +315,6 @@ autocmd FileType php setlocal omnifunc=phpactor#Complete
 " Run tests with vim-test in a split window inside vim instead of in the
 " terminal
 let test#strategy = 'vimterminal'
-
-" FlyGrep errors the first time it runs in a vim instance if this isn't set
-let g:spacevim_debug_level = 1
 
 
 " Functions
