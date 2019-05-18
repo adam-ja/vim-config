@@ -22,6 +22,6 @@ $powerline_dir/install.sh
 mkdir -p ${HOME}/vim-undo
 
 # Install/Update all plugins specified with vim-plug in vimrc, and remove any not specified
-vim +PlugClean! +PlugInstall! +qall
+vim - +PlugUpgrade +PlugClean! +PlugUpdate! +qall
 
-printf "\nIMPORTANT: You must now change the font in your terminal profile to a powerline font for the nice symbols in vim-airline to work.\n\n"
+printf "\e[38;5;202mIMPORTANT: You must now change the font in your terminal profile to a powerline font for the nice symbols in vim-airline to work.\e[0m\n"
