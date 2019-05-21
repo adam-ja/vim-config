@@ -150,10 +150,8 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_echo_msg_format = '[%linter%] %s'
 
 " Make ale error/warning gutter symbols prettier
-let g:ale_sign_error = '✘'
-let g:ale_sign_warning = '⚠'
-highlight ALEErrorSign ctermbg=none ctermfg=none
-highlight ALEWarningSign ctermbg=none ctermfg=none
+let g:ale_sign_error = '😠'
+let g:ale_sign_warning = '😒'
 
 
 " CtrlP
@@ -278,7 +276,6 @@ highlight ColorColumn ctermbg=DarkGrey
 set colorcolumn=120
 " CtrlP match window settings (order top-to-bottom, max height 999 lines)
 let g:ctrlp_match_window='order:ttb,max:999'
-
 
 " Other
 "-------
