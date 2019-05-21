@@ -46,6 +46,7 @@ Plug 'janko/vim-test'
 Plug 'kburdett/vim-nuuid'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plug 'junegunn/fzf.vim'
+Plug 'arp242/auto_mkdir2.vim'
 
 " Git integration
 "-----------------
