@@ -1,0 +1,4 @@
+{
+    "diagnostic.enable": false,
+    "intelephense.completion.insertUseDeclaration": false
+}

@@ -23,6 +23,7 @@ Plug 'tacahiroy/ctrlp-funky'
 "--------
 Plug 'w0rp/ale'
 Plug 'sheerun/vim-polyglot'
+Plug 'neoclide/coc.nvim', {'do': './install.sh'}
 
 " Utilities
 "-----------
@@ -152,6 +153,23 @@ let g:ale_echo_msg_format = '[%linter%] %s'
 " Make ale error/warning gutter symbols prettier
 let g:ale_sign_error = '😠'
 let g:ale_sign_warning = '😒'
+
+
+" COC
+"-----
+
+" Extensions to install
+let g:coc_global_extensions = [
+    \ 'coc-css',
+    \ 'coc-docker',
+    \ 'coc-html',
+    \ 'coc-json',
+    \ 'coc-phpls',
+    \ 'coc-sh',
+    \ 'coc-tsserver',
+    \ 'coc-vetur',
+    \ 'coc-yaml',
+    \]
 
 
 " CtrlP
