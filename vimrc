@@ -70,7 +70,6 @@ Plug 'RRethy/vim-illuminate'
 Plug 'mattn/emmet-vim'
 " PHP
 " ----
-Plug 'beanworks/vim-phpfmt'
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 
 " End vim-plug
@@ -98,8 +97,6 @@ set expandtab
 set autoindent
 " Make backspace work properly (e.g. traverse line breaks)
 set backspace=indent,eol,start
-" Use 2 spaces instead of 4 for certain filetypes
-autocmd Filetype puppet,ruby,yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 
 " Search
@@ -128,9 +125,6 @@ set listchars=tab:\|·,trail:`
 highlight SpecialKey ctermfg=darkgreen
 " Remove trailing spaces when saving a buffer
 autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
-" Stop vue syntax highlighting from breaking
-" (https://github.com/posva/vim-vue#my-syntax-highlighting-stops-working-randomly)
-autocmd FileType vue syntax sync fromstart
 " When a bracket is inserted, briefly jump to the matching one
 set showmatch
 " Extended % matching (if/else, XML tags, etc as well as standard brackets)
@@ -141,10 +135,6 @@ let g:ale_open_list = 1
 let g:ale_list_window_size = 5
 " Wait a second for me to finish typing before linting
 let g:ale_lint_delay = 1000
-" Set phpcs standard for ale to use
-let g:ale_php_phpcs_standard = 'psr2'
-" Set phpstan to level 5 for ale
-let g:ale_php_phpstan_level = 5
 " Show ale info in statusline
 let g:airline#extensions#ale#enabled = 1
 " Show linter at beginning of message
@@ -238,18 +228,6 @@ command! -bang Q :q<bang>
 command! -bang WQ :wq<bang>
 command! -bang Wq :wq<bang>
 
-" Phpactor mappings
-" Include use statement
-autocmd FileType php nmap <buffer> <Leader>u :call phpactor#UseAdd()<CR>
-" Invoke the context menu
-autocmd FileType php nmap <buffer> <Leader>mm :call phpactor#ContextMenu()<CR>
-" Invoke the navigation menu
-autocmd FileType php nmap <buffer> <Leader>nn :call phpactor#Navigate()<CR>
-" Goto definition of class or class member under the cursor
-autocmd FileType php nmap <buffer> <C-]> :call phpactor#GotoDefinition()<CR>
-" Show brief information about the symbol under the cursor
-autocmd FileType php nmap <buffer> <Leader>K :call phpactor#Hover()<CR>
-
 " vim-test mappings
 " Run all tests
 nmap <Leader>ta :TestSuite<CR>
@@ -301,6 +279,9 @@ let g:ctrlp_match_window='order:ttb,max:999'
 " Attempt to improve performance
 set lazyredraw
 
+" coc.nvim requests that this be low to avoid lag
+set updatetime=300
+
 " Set persistent undo (so undo history is saved even when buffers are closed)
 set undodir=~/.vim-undo
 set undofile
@@ -324,9 +305,6 @@ let g:localvimrc_persistent=1
 " commands. This is safe so long as you trust the source of any repos with a
 " lvimrc file.
 let g:localvimrc_sandbox = 0
-
-" Use phpactor for PHP omni-completion
-autocmd FileType php setlocal omnifunc=phpactor#Complete
 
 " Run tests with vim-test in a split window inside vim instead of in the
 " terminal
