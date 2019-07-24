@@ -309,6 +309,8 @@ let g:localvimrc_sandbox = 0
 " Run tests with vim-test in a split window inside vim instead of in the
 " terminal
 let test#strategy = 'vimterminal'
+" Make it a vertical split
+let test#vim#term_position = 'vertical'
 
 
 " Functions
