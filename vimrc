@@ -14,10 +14,9 @@ call plug#begin('~/.vim/plugged')
 
 " Files & Buffers
 "-----------------
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'FelikZ/ctrlp-py-matcher'
-Plug 'jasoncodes/ctrlp-modified.vim'
-Plug 'tacahiroy/ctrlp-funky'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
+Plug 'junegunn/fzf.vim'
+Plug 'liuchengxu/vista.vim'
 
 " Syntax
 "--------
@@ -45,8 +44,6 @@ Plug 'alvan/vim-closetag'
 Plug 'embear/vim-localvimrc'
 Plug 'janko/vim-test'
 Plug 'kburdett/vim-nuuid'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
-Plug 'junegunn/fzf.vim'
 Plug 'arp242/auto_mkdir2.vim'
 
 " Git integration
@@ -162,21 +159,6 @@ let g:coc_global_extensions = [
     \]
 
 
-" CtrlP
-"-------
-
-" Use ripgrep for faster indexing
-let g:ctrlp_user_command = 'rg %s --files --no-ignore-vcs --hidden --color=never --glob ""'
-" Use the faster ctrlp-py-matcher to speed up matching
-let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-" Open new files created by CtrlP in the current window
-let g:ctrlp_open_new_file='r'
-" Open multiple files opened by CtrlP as hidden buffers
-let g:ctrlp_open_multiple_files='i'
-" Only update match window after typing has stopped for 100ms
-let g:ctrlp_lazy_update=100
-
-
 " Key mapping
 "-------------
 
@@ -199,12 +181,8 @@ nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
-" Open CtrlP showing files modified on the current branch
-nmap <Leader>M :CtrlPBranch<CR>
-" Open CtrlP for functions in the current file
-nmap <Leader>f :CtrlPFunky<CR>
-" Open CtrlP for functions filtering by the word under the cursor
-nmap <Leader>F :execute 'CtrlPFunky ' . expand('<cword>')<CR>
+" Fuzzy search LSP symbols (variables, methods, etc found by coc.nvim)
+nmap <Leader>f :Vista finder coc<CR>
 " Split arguments in a function call/definition onto separate lines
 nnoremap <silent> <Leader>sp ^f(li<CR><Esc>:s/,/,\r/g<CR>f)i<CR><Esc>vib=/)<CR>==:nohlsearch<CR>
 " Map CamelCaseMotion to ',w', ',b', ',e', and ',ge'
@@ -270,8 +248,6 @@ set cursorline
 " Draw a vertical line at 120 characters
 highlight ColorColumn ctermbg=DarkGrey
 set colorcolumn=120
-" CtrlP match window settings (order top-to-bottom, max height 999 lines)
-let g:ctrlp_match_window='order:ttb,max:999'
 
 " Other
 "-------
