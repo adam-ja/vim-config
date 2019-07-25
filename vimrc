@@ -22,7 +22,7 @@ Plug 'liuchengxu/vista.vim'
 "--------
 Plug 'w0rp/ale'
 Plug 'sheerun/vim-polyglot'
-Plug 'neoclide/coc.nvim', {'do': './install.sh'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Utilities
 "-----------
