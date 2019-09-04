@@ -57,8 +57,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tomasr/molokai'
 Plug 'edkolev/tmuxline.vim'
-Plug 'ap/vim-css-color'
-Plug 'RRethy/vim-illuminate'
 
 " Language specifics
 "--------------------
@@ -140,23 +138,6 @@ let g:ale_echo_msg_format = '[%linter%] %s'
 " Make ale error/warning gutter symbols prettier
 let g:ale_sign_error = '😠'
 let g:ale_sign_warning = '😒'
-
-
-" COC
-"-----
-
-" Extensions to install
-let g:coc_global_extensions = [
-    \ 'coc-css',
-    \ 'coc-docker',
-    \ 'coc-html',
-    \ 'coc-json',
-    \ 'coc-phpls',
-    \ 'coc-sh',
-    \ 'coc-tsserver',
-    \ 'coc-vetur',
-    \ 'coc-yaml',
-    \]
 
 
 " Key mapping
