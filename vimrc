@@ -192,7 +192,7 @@ map ,e <Plug>CamelCaseMotion_e
 map ,ge <Plug>CamelCaseMotion_ge
 " Sort the paragraph around the current cursor position (above and below to the
 " nearest blank line) in alphabetical order
-nnoremap <Leader>al <C-v>apb:sort<CR>
+nnoremap <Leader>al <C-v>apb:sort i<CR>
 " Move to the previous ale warning/error
 nmap <silent> <Leader>j <Plug>(ale_previous_wrap)
 " Move to the next ale warning/error
