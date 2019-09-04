@@ -23,6 +23,9 @@ nmap <Leader>b :Buffers!<CR>
 " Rg within files under working directory
 nmap <Leader>g :Rg!<Space>
 
+" Search for word under cursor within files under working directory
+nmap <Leader>G :Rg!<Space><cword><CR>
+
 " Modified files
 nmap <Leader>m :GFiles!?<CR>
 
