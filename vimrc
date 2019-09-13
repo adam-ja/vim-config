@@ -20,7 +20,7 @@ Plug 'liuchengxu/vista.vim'
 
 " Syntax
 "--------
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
