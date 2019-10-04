@@ -32,7 +32,7 @@ Plug 'tomtom/tlib_vim' " Required for vim-snipmate
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'bkad/CamelCaseMotion'
-Plug 'godlygeek/tabular'
+Plug 'junegunn/vim-easy-align'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -152,8 +152,8 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-" Shortcut for Tabularize
-map <F2> :Tabularize /
+" Shortcut for vim-easy-align
+map <F2> <Plug>(EasyAlign)
 " Toggle paste mode on/off with F3
 set pastetoggle=<F3>
 " Easy window switching
