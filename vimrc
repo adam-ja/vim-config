@@ -23,6 +23,7 @@ Plug 'liuchengxu/vista.vim'
 Plug 'dense-analysis/ale'
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'kamykn/spelunker.vim'
 
 " Utilities
 "-----------
@@ -123,6 +124,9 @@ autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
 set showmatch
 " Extended % matching (if/else, XML tags, etc as well as standard brackets)
 runtime macros/matchit.vim
+" Only highlight mis-spelled words (not rare, mis-capitalised, or words from a
+" different language region)
+let g:spelunker_highlight_type = 2
 " Open error window when ale detects errors
 let g:ale_open_list = 1
 " Show 5 errors at a time in the error window (default is 10)
