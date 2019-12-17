@@ -24,6 +24,7 @@ Plug 'dense-analysis/ale'
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kamykn/spelunker.vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 " Utilities
 "-----------
@@ -127,6 +128,10 @@ runtime macros/matchit.vim
 " Only highlight mis-spelled words (not rare, mis-capitalised, or words from a
 " different language region)
 let g:spelunker_highlight_type = 2
+" Automatically open markdown browser preview when entering a markdown buffer
+let g:mkdp_auto_start = 1
+" Automatically close markdown browser preview when leaving a markdown buffer
+let g:mkdp_auto_close = 1
 " Open error window when ale detects errors
 let g:ale_open_list = 1
 " Show 5 errors at a time in the error window (default is 10)
