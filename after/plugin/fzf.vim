@@ -14,6 +14,9 @@ command! -bang -nargs=* Rg
 " Key Mappings "
 """"""""""""""""
 
+" Lines in the current buffer
+nmap <Leader>l :BLines!<CR>
+
 " Files under working directory
 nmap <Leader>p :Files!<CR>
 
@@ -24,7 +27,7 @@ nmap <Leader>b :Buffers!<CR>
 nmap <Leader>g :Rg!<Space>
 
 " Search for word under cursor within files under working directory
-nmap <Leader>G :Rg!<Space><cword><CR>
+nmap <expr> <Leader>G ':Rg!<Space>'.expand('<cword>').'<cr>'
 
 " Modified files
 nmap <Leader>m :GFiles!?<CR>
