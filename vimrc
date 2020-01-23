@@ -93,6 +93,10 @@ set expandtab
 set autoindent
 " Make backspace work properly (e.g. traverse line breaks)
 set backspace=indent,eol,start
+" Fold automatically by indentation
+set foldmethod=indent
+" Do not close folds by default when opening a file
+set nofoldenable
 
 
 " Search
