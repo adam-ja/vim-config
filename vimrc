@@ -29,10 +29,6 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 " Utilities
 "-----------
 Plug 'vim-scripts/SearchComplete'
-Plug 'MarcWeber/vim-addon-mw-utils' " Required for vim-snipmate
-Plug 'tomtom/tlib_vim' " Required for vim-snipmate
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
 Plug 'bkad/CamelCaseMotion'
 Plug 'junegunn/vim-easy-align'
 Plug 'terryma/vim-multiple-cursors'
@@ -136,20 +132,6 @@ let g:spelunker_highlight_type = 2
 let g:mkdp_auto_start = 1
 " Automatically close markdown browser preview when leaving a markdown buffer
 let g:mkdp_auto_close = 1
-" Open error window when ale detects errors
-let g:ale_open_list = 1
-" Show 5 errors at a time in the error window (default is 10)
-let g:ale_list_window_size = 5
-" Wait a second for me to finish typing before linting
-let g:ale_lint_delay = 1000
-" Show ale info in statusline
-let g:airline#extensions#ale#enabled = 1
-" Show linter at beginning of message
-let g:ale_echo_msg_format = '[%linter%] %s'
-
-" Make ale error/warning gutter symbols prettier
-let g:ale_sign_error = '😠'
-let g:ale_sign_warning = '😒'
 
 
 " Key mapping
@@ -185,11 +167,9 @@ map ,e <Plug>CamelCaseMotion_e
 map ,ge <Plug>CamelCaseMotion_ge
 " Sort the paragraph around the current cursor position (above and below to the
 " nearest blank line) in alphabetical order
-nnoremap <Leader>al <C-v>apb:sort i<CR>
-" Move to the previous ale warning/error
-nmap <silent> <Leader>j <Plug>(ale_previous_wrap)
-" Move to the next ale warning/error
-nmap <silent> <Leader>k <Plug>(ale_next_wrap)
+nnoremap <Leader>s <C-v>apb:sort i<CR>
+" Sort the selected lines in alphabetical order
+vnoremap <Leader>s :sort<CR>
 " Disable default nuuid plugin mappings
 let g:nuuid_no_mappings = 1
 
