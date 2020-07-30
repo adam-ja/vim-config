@@ -7,7 +7,7 @@ command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 " Add a preview to the :Rg command
-command! -bang -nargs=* Rg
+command! -bang -nargs=* Rgfzf
     \ call fzf#vim#grep('rg --column --no-heading --line-number --color=always '.shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
 
 """"""""""""""""
@@ -15,25 +15,27 @@ command! -bang -nargs=* Rg
 """"""""""""""""
 
 " Lines in the current buffer
-nmap <Leader>l :BLines!<CR>
+nmap <Leader>fl :BLines!<CR>
 
 " Files under working directory
-nmap <Leader>p :Files!<CR>
+nmap <Leader>ff :Files!<CR>
 
 " Open buffers
-nmap <Leader>b :Buffers!<CR>
+nmap <Leader>fb :Buffers!<CR>
 
-" Rg within files under working directory
-nmap <Leader>g :Rg!<Space>
-
-" Search for word under cursor within files under working directory
-nmap <expr> <Leader>G ':Rg!<Space>'.expand('<cword>').'<cr>'
+" Rg search within files under working directory (results open in fzf preview)
+nmap <Leader>fr :Rgfzf!<Space>
+" Automatically submit search for word under cursor
+nmap <expr> <Leader>fR ':Rgfzf!<Space>'.expand('<cword>').'<cr>'
 
 " Modified files
-nmap <Leader>m :GFiles!?<CR>
+nmap <Leader>fm :GFiles!?<CR>
 
 " Commits affecting current buffer
-nmap <Leader>c :BCommits!<CR>
+nmap <Leader>fc :BCommits!<CR>
 
 " All commits
-nmap <Leader>C :Commits!<CR>
+nmap <Leader>fC :Commits!<CR>
+
+" Fuzzy search LSP symbols (variables, methods, etc found by coc.nvim)
+nmap <Leader>fs :Vista finder coc<CR>

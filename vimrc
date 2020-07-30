@@ -42,6 +42,8 @@ Plug 'embear/vim-localvimrc'
 Plug 'janko/vim-test'
 Plug 'kburdett/vim-nuuid'
 Plug 'arp242/auto_mkdir2.vim'
+Plug 'jremmen/vim-ripgrep'
+Plug 'stefandtw/quickfix-reflector.vim'
 
 " Git integration
 "-----------------
@@ -104,6 +106,8 @@ set hlsearch
 set ignorecase
 " Search as you type
 set incsearch
+" Configure options to pass to ripgrep when using the :Rg command
+let g:rg_command = 'rg --vimgrep --smart-case --follow --ignore-vcs --color=never'
 
 
 " Syntax
@@ -156,8 +160,6 @@ nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
-" Fuzzy search LSP symbols (variables, methods, etc found by coc.nvim)
-nmap <Leader>f :Vista finder coc<CR>
 " Split arguments in a function call/definition onto separate lines
 nnoremap <silent> <Leader>sp ^f(li<CR><Esc>:s/,/,\r/g<CR>f)i<CR><Esc>vib=/)<CR>==:nohlsearch<CR>
 " Map CamelCaseMotion to ',w', ',b', ',e', and ',ge'
@@ -190,6 +192,11 @@ nmap <Leader>tt :TestNearest<CR>
 nmap <Leader>tl :TestLast<CR>
 " Go to the last run test
 nmap <Leader>tg :TestVisit<CR>
+
+" Rg search within files under working directory (results open in quickfix window)
+nmap <Leader>r :Rg<Space>
+" Automatically submit search for word under cursor
+nmap <expr> <Leader>R ':Rg<Space>'.expand('<cword>').'<cr>'
 
 " UI / styling
 "--------------
