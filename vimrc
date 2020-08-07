@@ -31,7 +31,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'vim-scripts/SearchComplete'
 Plug 'bkad/CamelCaseMotion'
 Plug 'junegunn/vim-easy-align'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-speeddating'
