@@ -25,6 +25,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kamykn/spelunker.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'luochen1990/rainbow'
 
 " Utilities
 "-----------
@@ -129,6 +130,8 @@ autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
 set showmatch
 " Extended % matching (if/else, XML tags, etc as well as standard brackets)
 runtime macros/matchit.vim
+" Enable rainbow parentheses
+let g:rainbow_active = 1
 " Only highlight mis-spelled words (not rare, mis-capitalised, or words from a
 " different language region)
 let g:spelunker_highlight_type = 2
