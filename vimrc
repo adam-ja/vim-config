@@ -12,9 +12,9 @@ endif
 " Initialise vim-plug to install plugins to ~/.vim/plugged
 call plug#begin('~/.vim/plugged')
 
-" Files & Buffers
+" Fuzzy finder
 "-----------------
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'liuchengxu/vista.vim'
 
