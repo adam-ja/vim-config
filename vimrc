@@ -57,6 +57,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tomasr/molokai'
 Plug 'edkolev/tmuxline.vim'
+Plug 'ryanoasis/vim-devicons'
 
 " Language specifics
 "--------------------
