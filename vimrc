@@ -46,6 +46,7 @@ Plug 'kburdett/vim-nuuid'
 Plug 'arp242/auto_mkdir2.vim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'stefandtw/quickfix-reflector.vim'
+Plug 'AndrewRadev/splitjoin.vim'
 
 " Git integration
 "-----------------
@@ -165,8 +166,6 @@ nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
-" Split arguments in a function call/definition onto separate lines
-nnoremap <silent> <Leader>sp ^f(li<CR><Esc>:s/,/,\r/g<CR>f)i<CR><Esc>vib=/)<CR>==:nohlsearch<CR>
 " Map CamelCaseMotion to ',w', ',b', ',e', and ',ge'
 map ,w <Plug>CamelCaseMotion_w
 map ,b <Plug>CamelCaseMotion_b
