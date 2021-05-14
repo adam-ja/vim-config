@@ -8,6 +8,8 @@ let g:ale_lint_delay = 1000
 let g:airline#extensions#ale#enabled = 1
 " Show linter at beginning of message
 let g:ale_echo_msg_format = '[%linter%] %s'
+" Disable LSP features in ALE as these are handled by another plugin
+let g:ale_disable_lsp = 1
 
 " Make ale error/warning gutter symbols prettier
 let g:ale_sign_error = '😠'
