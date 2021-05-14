@@ -219,6 +219,8 @@ endif
 let g:airline_theme='luna'
 " Use powerline font for nice VCS symbols for vim-airline
 let g:airline_powerline_fonts=1
+" Disable airline scrollbar extension - takes up unnecessary space
+let g:airline#extensions#scrollbar#enabled = 0
 " Automatically change the screen title
 set title
 " Show line numbers
