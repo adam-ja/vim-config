@@ -60,7 +60,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tomasr/molokai'
 Plug 'edkolev/tmuxline.vim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'Yggdroot/indentLine'
+Plug 'nathanaelkane/vim-indent-guides'
 
 " Language specifics
 "--------------------
@@ -126,8 +126,6 @@ filetype plugin indent on
 set list
 " Highlight tabs and trailing spaces
 set listchars=tab:\|·,trail:`
-" Set the colour for highlighted stuff
-highlight SpecialKey ctermfg=darkgreen
 " Remove trailing spaces when saving a buffer
 autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
 " When a bracket is inserted, briefly jump to the matching one
@@ -235,8 +233,18 @@ set scrolloff=999
 " Highlight the line the cursor is currently on
 set cursorline
 " Draw a vertical line at 120 characters
-highlight ColorColumn ctermbg=DarkGrey
 set colorcolumn=120
+" Enable indent guides by default
+let g:indent_guides_enable_on_vim_startup = 1
+" Just use one character to highlight indent level rather than highlighting
+" the full indent block
+let g:indent_guides_guide_size = 1
+" Start indent guides from level 2 - no need to see it on column 1
+let g:indent_guides_start_level = 2
+" Use custom colours for indent guides (subtly darker than Molokai CursorColumn)
+let g:indent_guides_auto_colors = 0
+highlight IndentGuidesOdd  guibg=#39382d
+highlight IndentGuidesEven guibg=#39382d
 
 " Other
 "-------
