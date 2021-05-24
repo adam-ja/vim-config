@@ -260,6 +260,9 @@ set wildmenu
 " first, and then each full match on subsequent presses of <TAB>
 set wildmode=list:longest,full
 
+" Use system clipboard by default
+set clipboard=unnamed,unnamedplus
+
 " Make the decisions given when asked before sourcing local vimrc files
 " persistent over multiple vim runs and instances (only if the answer was given
 " in upper case (Y/N/A))
