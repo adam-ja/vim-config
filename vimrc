@@ -60,6 +60,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tomasr/molokai'
 Plug 'edkolev/tmuxline.vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'Yggdroot/indentLine'
 
 " Language specifics
 "--------------------
